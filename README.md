@@ -1,7 +1,7 @@
 # HTTP Webserver From Scratch
 ## Implemented RFC of HTTP using SOCKET programming in python3
 
-![alt text](./httpImg.png "HTTP image")
+![HTTP image](./images/httpImg.png "HTTP image")
 
 # HTTP-Web-Server
 This is the project based on http protocol that has been used in day to day life. All dimensions are considered according to rfc 2616
