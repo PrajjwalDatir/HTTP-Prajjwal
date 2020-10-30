@@ -57,4 +57,23 @@ webserver {
 		}	
 	}
 }
+
 ```
+> ### Minimum  Expectations from Projects
+	For all projects, the commands should follow unix conventions. 
+	That is, the use of hyphenated options (e.g. ls -a)  and 
+	arguments on the command line (e.g. ls /tmp/) should be supported. 
+	The default behavior of each software should be like the existing tools.
+	
+	HTTP Server
+	Reference: https://tools.ietf.org/html/rfc2616
+	GET, POST, PUT, HEAD, DELETE, Cookies, Headers, non-persistent connections, 
+	Multiple clients at the same time (with a sepearate program to test this), 
+	logging with levels of logging, handling file permissions;  
+	Server configuration - config file with DocumentRoot, log file name, max simulateneous connections; 
+	way to stop and restart the server;
+	
+	Marks : Basic HTTP 5 method = 15 marks; MT = 3 marks; 
+	Config file and handling = 3 marks; cookies = 2 marks; log = 3 marks;  
+	file permissions = 1 marks; Automated Testing = 3 marks.
+
