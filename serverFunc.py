@@ -141,7 +141,7 @@ class server:
 			client = Thread(group = None, target = self.run, kwargs = {'new_connection' : new_connection, 'recv_addr' : recv_addr})
 			#Start the thread dedicated to requests only from the given client
             client.start()
-    
+
 
 
 
