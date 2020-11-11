@@ -12,12 +12,23 @@ import csv					 # used in get and post method to insert the data into file
 import base64				 # used for decoding autherization header in delete method
 import sys					 # for arguements, exits
 import logging				 # for logging
-from config import *
+from config import *         # import some variable values
+import signal                # signal to handle Ctrl+C and other SIGNALS
 
 serversocket = socket(AF_INET, SOCK_STREAM)
 s = socket(AF_INET, SOCK_DGRAM)
 logging.basicConfig(filename = LOG, level = logging.INFO, format = '%(asctime)s:%(filename)s:%(message)s')
 
+lthread = []				 # list to work with the threads
+file_extension = FORMAT      # Dictionary to convert file extentions into the content types eg. .html to text/html
+file_type = FORMAT2          # Dictionary to convert content types into the file extentions eg. text/html to .html
+month = MONTH
+
+ip = '0.0.0.0'               # IP 
+
+scode = 0                    # Status code initialization
+conditional_get = False    	 # check : is it conditional get method?
+conn = True					 # to receive requests continuously in client's thread
 
 #function to implement post method 		
 def method_post(ent_body, connectionsocket, switcher):
@@ -415,6 +426,7 @@ def server():
             status(connectionsocket, 503)
             connectionsocket.close()
     serversocket.close()
+
 '''
 Function to handle the exit ( Ctrl+C and other signals )
 '''
@@ -441,7 +453,6 @@ def findip():
 
 if __name__ == '__main__':
     # To run it on the localhost if you dont want google DNS
-    ip = None
     try:
         if sys.argv[2] == 'localhost':
             ip = '127.0.0.1'

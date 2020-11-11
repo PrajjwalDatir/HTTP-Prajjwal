@@ -8,6 +8,10 @@ SIZE = 8192 # 8*1024 = 8MB
 '''Gets the Current Working directory (.)'''
 ROOT = os.getcwd()
 
+#dictionary to convert month to its decimal
+MONTH = { 'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6, 
+        'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12 }
+
 ''' 
 fav icon which is displayed in title bar of the browser is requested by client
 so we define the path of favicon.ico here
@@ -85,8 +89,8 @@ except:
 '''
 username and password for approval of delete request method
 '''
-USERNAME = 'maniac' # delete can only be done after checking Auth
-PASSWORD = 'datir' # Keep this secret folks
+USERNAME = 'http' # delete can only be done after checking Auth
+PASSWORD = 'sudo' # Keep this secret folks
 
 
 '''
@@ -169,6 +173,81 @@ FORMAT = {
 		".3gp"	: "video/3gpp",
 		".3g2"	: "video/3gpp2",
 		".7z"	: "application/x-7z-compressed",
+	}
+'''Following is the file formats supported by the server'''
+FORMAT2 = {
+		"audio/aac"                     : ".aac"    ,
+		"application/x-abiword"         : ".abw"	,
+		"application/x-freearc"         : ".arc"	,
+		"video/x-msvideo"               : ".avi"    ,
+        "application/vnd.amazon.ebook"  : ".azw"    ,
+		"application/octet-stream"      : ".bin"	,
+		"image/bmp"                     : ".bmp"    ,
+		"application/x-bzip"            : ".bz"	    ,
+		"application/x-bzip2"           : ".bz2"    ,
+		"application/x-csh"             : ".csh"    ,
+		"text/css"                      : ".css"    ,
+		"text/csv"                      : ".csv"	,
+		"application/msword"            : ".doc"    ,
+		"application/vnd.openxmlformats-officedocument.wordprocessingml.document":".docx"	 ,
+		"application/vnd.ms-fontobject" : ".eot"	,
+		"application/epub+zip"          : ".epub"   ,
+		"application/gzip"              : ".gz"	    ,
+		"image/gif"                     : ".gif"	,
+		"text/html"                     : ".htm"	,
+		"text/html"                     : ".html"   ,
+		"image/vnd.microsoft.icon"      : ".ico" 	,
+		"text/calendar"                 : ".ics"	,
+		"application/java-archive"      : ".jar"	,
+		"image/jpeg"                    : ".jpeg"	,
+		"image/jpeg"                    : ".jpg"	,
+		"text/javascript"               : ".js"	    ,
+		"application/json"              : ".json"	,
+		"application/ld+json"           : ".jsonld" ,
+		"audio/midi"                    : ".mid"	,
+		"audio/midi"                    : " .midi"  ,
+		"text/javascript"               : ".mjs"	,
+		"audio.mpeg"                    : ".mp3"	,
+		"video/mpeg"                    : ".mpeg"	,
+		"application/vnd.apple.installer+xml":".mpkg"	 ,
+		"application/vnd.oasis.opendocument.presentation"   :   ".odp"	 ,
+		"application/vnd.oasis.opendocument.spreadsheet"    :   ".ods"	 ,
+		"audio/ogg"                     : ".oga"	,
+		"video/ogg"                     : ".ogv"	,
+		"application/ogg"               : ".ogx"	,
+		"font/otf"                      : ".otf"	,
+		"image/png"                     : ".png"	,
+		"application/pdf"               : ".pdf"	,
+		"appliction/php"                : ".php"	,
+		"application/vnd.ms-powerpoint" : ".ppt"	,
+		"application/vnd.openxmlformats-officedocument.presentationml.presentation":".pptx"	 ,
+		"application/x-rar-compressed"  : ".rar"	,
+		"application/rtf"               : ".rtf"	,
+		"application/x-sh"              : ".sh"	    ,
+		"image/svg+xml"                 : ".svg"	,
+		"application/x-shockwave-flash" : ".swf"	,
+		"application/x-tar"             : ".tar"	,
+		"image/tiff"                    : ".tif"	,
+		"image/tiff"                    : " .tiff"  ,
+		"video/mp2t"                    : ".ts"	    ,
+		"font/ttf"                      : ".ttf"	,
+		"text/html"                     : ".txt" 	,
+		"application/vnd.visio"         : ".vsd"	,
+		"audio/wav"                     : ".wav"	,
+		"audio/webm"                    : ".weba"	,
+		"video/webm"                    : ".webm"	,
+		".webp"                         : ".webp"	,
+		"font/woff"                     : ".woff"   ,
+		"font/woff2"                    : ".woff2"  ,
+		"application/xhtml+xml"         : ".xhtml"  ,
+		"application/vnd.ms-excel"      : ".xls"	,
+		"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":".xlsx"	 ,
+		"application/xml"               : ".xml"	,
+		"application/vnd.mozilla.xul+xml":".xul"    ,
+		"application/zip"               : ".zip"	,
+		"video/3gpp"                    : ".3gp"	,
+		"video/3gpp2"                   : ".3g2"    ,
+		"application/x-7z-compressed"   : ".7z"	    ,
 	}
 
 '''Response status codes'''
