@@ -24,7 +24,8 @@ file_extension = FORMAT      # Dictionary to convert file extentions into the co
 file_type = FORMAT2          # Dictionary to convert content types into the file extentions eg. text/html to .html
 month = MONTH
 
-IDENTITY = 0                 # Cookie ID . This project Increments it by 1   NEVER DO IT IN REAL HTTP
+IDENTITY = 0                 # Cookie ID . This project Increments it by 1   
+
 ip = None                    # IP 
 
 scode = 0                    # Status code initialization
@@ -531,7 +532,7 @@ def method_put(connectionsocket, addr, ent_body, filedata, element, switcher, f_
     return display
 
 #function which operate on top of the methods i.e bridge between response and requests
-def clientfun(connectionsocket, addr, start):
+def bridgeFunction(connectionsocket, addr, start):
     global serversocket, file_extension, conditional_get, conn, SIZE, lthread, SERVER, MAIN, scode
     conditional_get = False
     f_flag = 0
@@ -632,7 +633,7 @@ def server():
         # TODO print
         lthread.append(connectionsocket)  # add connections
         if(len(lthread) < MAX_REQUESTS):
-            start_new_thread(clientfun, (connectionsocket, addr, start))
+            start_new_thread(bridgeFunction, (connectionsocket, addr, start))
         else:
             status(connectionsocket, 503)
             connectionsocket.close()
