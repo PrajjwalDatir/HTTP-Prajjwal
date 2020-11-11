@@ -24,11 +24,107 @@ file_extension = FORMAT      # Dictionary to convert file extentions into the co
 file_type = FORMAT2          # Dictionary to convert content types into the file extentions eg. text/html to .html
 month = MONTH
 
-ip = '0.0.0.0'               # IP 
+IDENTITY = 0                 # Cookie ID . This project Increments it by 1   NEVER DO IT IN REAL HTTP
+ip = None                    # IP 
 
 scode = 0                    # Status code initialization
 conditional_get = False    	 # check : is it conditional get method?
 conn = True					 # to receive requests continuously in client's thread
+
+
+# function to fetch last modified date of the resource
+def last_modified(element):
+    l = time.ctime(os.path.getmtime(element)).split(' ')
+    for i in l:
+        if len(i) == 0:
+            l.remove(i)
+    l[0] = l[0] + ','
+    string = (' ').join(l)
+    string = 'Last-Modified: ' + string
+    return string
+
+#function to check if the resource has been modified or not since the date in HTTP request 
+def if_modify(state, element):
+    global conditional_get
+    day = state.split(' ')
+    if len(day) == 5:
+        global month
+        m = month[day[1]]
+        date = int(day[2])
+        t = day[3].split(':')
+        t[0], t[1], t[2] = int(t[0]), int(t[1]), int(t[2])
+        y = int(day[4])
+        ti = datetime(y, m, date, t[0], t[1], t[2])
+        hsec = int(time.mktime(ti.timetuple()))
+        fsec = int(os.path.getmtime(element))
+        if hsec == fsec:
+            conditional_get = True
+        elif hsec < fsec:
+            conditional_get = False
+
+#function to return current date
+def date():
+    l = time.ctime().split(' ')
+    l[0] = l[0] + ','
+    string = (' ').join(l)
+    string = 'Date: ' + string
+    return string
+
+#function to give response if server is busy
+def status(connectionsocket, code):
+    global ip, lthread, scode
+    scode = code
+    display = []
+    if code == 500:
+        display.append('HTTP/1.1 500 Internal Server Error')
+    elif code == 503:
+        display.append('HTTP/1.1 503 Server Unavailable')
+    elif code == 505:
+        display.append('HTTP/1.1 505 HTTP Version Not Supported')
+    elif code == 403:
+        display.append('HTTP/1.1 403 Forbidden')
+    elif code == 404:
+        display.append('HTTP/1.1 404 Not Found')
+    elif code == 414:
+        display.append('HTTP/1.1 414 Request-URI Too Long')
+    elif code == 415:
+        display.append('HTTP/1.1 415 Unsupported Media Type')
+    display.append('Server: ' + ip)
+    display.append(date())
+    display.append('\r\n')
+    if code == 505:
+        display.append('Supported Version - HTTP/1.1 \n Rest Unsupported')
+    encoded = '\r\n'.join(display).encode()
+    connectionsocket.send(encoded)
+    logging.info('	{}	{}\n'.format(connectionsocket, scode))
+    try:
+        lthread.remove(connectionsocket)
+        connectionsocket.close()
+    except:
+        pass
+    server()
+
+#function for conditional get implementation
+def status_304(connectionsocket, element):
+    global ip
+    scode = 304
+    display = []
+    display.append('HTTP/1.1 304 Not Modified')
+    display.append(date())
+    display.append(last_modified(element))
+    display.append('Server: ' + ip)
+    display.append('\r\n')
+    encoded = '\r\n'.join(display).encode()
+    connectionsocket.send(encoded)
+
+#function to resolve url in request message
+def resolve(element):
+    u = urlparse(element)
+    element = unquote(u.path)
+    if element == '/':
+        element = os.getcwd()
+    query = parse_qs(u.query)
+    return (element, query)
 
 #function to implement post method 		
 def method_post(ent_body, connectionsocket, switcher):
@@ -135,6 +231,7 @@ def method_delete(element, connectionsocket, ent_body, switcher):
     display.append('\r\n')
     encoded = '\r\n'.join(display).encode()
     connectionsocket.send(encoded)
+
 #function to implement get and head method
 def method_get_head(connectionsocket, element, switcher, query, method):
     global serversocket, file_extension, conditional_get, conn, ip, scode, IDENTITY
@@ -319,6 +416,120 @@ def method_get_head(connectionsocket, element, switcher, query, method):
     else:
         status(connectionsocket, 400)
 
+#function to implement put method
+def method_put(connectionsocket, addr, ent_body, filedata, element, switcher, f_flag):
+    global scode
+    display = []
+    isfile = os.path.isfile(element)
+    isdir = os.path.isdir(element)
+    try:
+        length = int(switcher['Content-Length'])
+    except KeyError:
+        status(connectionsocket, 411)
+    q = int(length // SIZE)
+    r = length % SIZE
+    try:
+        filedata = filedata + ent_body
+    except TypeError:
+        ent_body = ent_body.encode()
+        filedata = filedata + ent_body
+    i = len(ent_body)
+    size = length - i
+    while size > 0:
+        ent_body = connectionsocket.recv(SIZE)
+        try:
+            filedata = filedata + ent_body
+        except TypeError:
+            ent_body = ent_body.encode()
+            filedata = filedata + ent_body
+        size = size - len(ent_body)
+    move_p, mode_f, r_201 = False, True, False
+    isfile = os.path.isfile(element)
+    isdir = os.path.isdir(element)
+    l = len(element)
+    limit = len(ROOT)
+    if l >= limit:
+        if isdir:
+            if os.access(element, os.W_OK):
+                pass
+            else:
+                status(connectionsocket, 403)
+            move_p = True
+            loc = ROOT + '/' + str(addr[1])
+            try:
+                loc = loc + file_type[switcher['Content-Type'].split(';')[0]]
+            except:
+                status(connectionsocket, 403)
+            if f_flag == 0:	
+                f = open(loc, "w")
+                f.write(filedata.decode())
+            else:
+                f = open(loc, "wb")
+                f.write(filedata)
+            f.close()
+        elif isfile:
+            if os.access(element, os.W_OK):
+                pass
+            else:
+                status(connectionsocket, 403)
+            mode_f = True
+            if f_flag == 0:	
+                f = open(element, "w")
+                f.write(filedata.decode())
+            else:
+                f = open(element, "wb")
+                f.write(filedata)
+            f.close()
+        else:
+            #r = random.randint(0,4)
+            if ROOT in element:
+                r_201 = True
+                element = ROOT + '/' + str(addr[1])
+                try:
+                    element = element + file_type[switcher['Content-Type'].split(';')[0]]
+                except:
+                    status(connectionsocket, 403)
+                if f_flag == 0:	
+                    f = open(element, "w")
+                    f.write(filedata.decode())
+                else:
+                    f = open(element, "wb")
+                    f.write(filedata)
+                f.close()
+            else:
+                mode_f = False
+    else:
+        move_p = True
+        loc = ROOT + '/' + str(addr[1])
+        try:
+            loc = loc + file_type[switcher['Content-Type']]
+        except:
+            status(connectionsocket, 403)
+        if f_flag == 0:	
+            f = open(loc, "w")
+        else:
+            f = open(loc, "wb")
+        f.write(filedata)
+        f.close()
+    if move_p:
+        scode = 301
+        display.append('HTTP/1.1 301 Moved Permanently')
+        display.append('Location: ' + loc)
+    elif mode_f:
+        scode = 204
+        display.append('HTTP/1.1 204 No Content')
+        display.append('Content-Location: ' + element)
+    elif r_201:
+        scode = 201
+        display.append('HTTP/1.1 201 Created')
+        display.append('Content-Location: ' + element)
+    elif not mode_f:
+        scode = 501
+        display.append('HTTP/1.1 501 Not Implemented')
+    display.append('Connection: keep-alive')
+    display.append('\r\n')
+    return display
+
 #function which operate on top of the methods i.e bridge between response and requests
 def clientfun(connectionsocket, addr, start):
     global serversocket, file_extension, conditional_get, conn, SIZE, lthread, SERVER, MAIN, scode
@@ -327,7 +538,7 @@ def clientfun(connectionsocket, addr, start):
     filedata = b""
     conn = True
     urlflag = 0
-    while conn and SERVER and MAIN:
+    while conn :
         message = connectionsocket.recv(SIZE)
         try:
             message = message.decode('utf-8')
@@ -475,6 +686,6 @@ if __name__ == '__main__':
         print('\nTO RUN\nType: python3 httpserver.py port_number')
         sys.exit()
     serversocket.listen(40)
-    print('HTTP server running on ip: ' + ip + ' port: ' + str(serverport) + '\n(http://' + ip + ':' + str(serverport) +'/)')
-    server()
+    print('HTTP server running on ip: ' + ip + ' port: ' + str(serverport) + '\nGo to this in the browser: (http://' + ip + ':' + str(serverport) +'/)')
+    server()            # IMP calling the main server Function
     sys.exit()
