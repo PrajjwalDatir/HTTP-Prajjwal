@@ -370,3 +370,73 @@
 
 2020-11-12 22:34:04,664:httpServer.py:	127.0.0.1	36374	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	0
 
+2020-11-12 22:38:45,603:httpServer.py:	127.0.0.1	36568	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	0
+
+2020-11-12 22:38:49,881:httpServer.py:	127.0.0.1	36574	GET /home/maniac/HTTP-Prajjwal/Docs HTTP/1.1	/home/maniac/HTTP-Prajjwal/Docs	0
+
+2020-11-12 22:38:51,288:httpServer.py:	127.0.0.1	36576	GET /home/maniac/HTTP-Prajjwal/Docs/RFC.md HTTP/1.1	/home/maniac/HTTP-Prajjwal/Docs/RFC.md	0
+
+2020-11-12 22:38:53,827:httpServer.py:	127.0.0.1	36576	GET /home/maniac/HTTP-Prajjwal/README.md HTTP/1.1	/home/maniac/HTTP-Prajjwal/README.md	0
+
+2020-11-12 22:38:56,276:httpServer.py:	127.0.0.1	36576	GET /home/maniac/HTTP-Prajjwal/output.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.txt	0
+
+2020-11-12 22:38:59,438:httpServer.py:	127.0.0.1	36576	GET /home/maniac/HTTP-Prajjwal/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal/form.html	0
+
+2020-11-12 22:42:40,864:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 36632)>	404
+
+2020-11-12 22:42:40,866:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 36634)>	404
+
+2020-11-12 22:42:40,867:httpServer.py:	127.0.0.1	36636	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.txt HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.txt	404
+
+2020-11-12 22:42:40,868:httpServer.py:	127.0.0.1	36636	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	404
+
+2020-11-12 22:45:19,328:httpServer.py:	<socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 36658)>	404
+
+2020-11-12 22:45:19,329:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 36660)>	404
+
+2020-11-12 22:45:19,330:httpServer.py:	127.0.0.1	36662	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.txt HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.txt	404
+
+2020-11-12 22:45:19,331:httpServer.py:	127.0.0.1	36662	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	404
+
+2020-11-12 22:45:55,832:httpServer.py:	127.0.0.1	36668	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	404
+
+2020-11-12 22:45:56,786:httpServer.py:	127.0.0.1	36670	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	404
+
+2020-11-12 22:45:58,574:httpServer.py:	127.0.0.1	36672	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
+
+2020-11-12 22:48:23,609:httpServer.py:	127.0.0.1	36706	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
+
+2020-11-12 22:48:23,611:httpServer.py:	127.0.0.1	36706	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
+
+2020-11-12 22:48:23,612:httpServer.py:	127.0.0.1	36706	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	404
+
+2020-11-12 22:48:23,613:httpServer.py:	127.0.0.1	36706	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	404
+
+2020-11-12 22:48:23,614:httpServer.py:	127.0.0.1	36706	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	404
+
+2020-11-12 22:48:23,615:httpServer.py:	<socket.socket fd=21, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 36708)>	404
+
+2020-11-12 22:48:55,039:httpServer.py:	127.0.0.1	36716	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
+
+2020-11-12 22:48:55,041:httpServer.py:	127.0.0.1	36716	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
+
+2020-11-12 22:48:55,043:httpServer.py:	127.0.0.1	36716	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	404
+
+2020-11-12 22:48:55,044:httpServer.py:	127.0.0.1	36718	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	404
+
+2020-11-12 22:48:55,045:httpServer.py:	127.0.0.1	36718	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	404
+
+2020-11-12 22:48:55,046:httpServer.py:	127.0.0.1	36720	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
+
+2020-11-12 22:49:05,890:httpServer.py:	127.0.0.1	36724	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
+
+2020-11-12 22:49:05,892:httpServer.py:	127.0.0.1	36724	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
+
+2020-11-12 22:49:05,893:httpServer.py:	127.0.0.1	36724	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	404
+
+2020-11-12 22:49:05,894:httpServer.py:	127.0.0.1	36726	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	404
+
+2020-11-12 22:49:05,895:httpServer.py:	127.0.0.1	36726	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	404
+
+2020-11-12 22:49:05,896:httpServer.py:	127.0.0.1	36728	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
+

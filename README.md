@@ -2,6 +2,11 @@
 ## Implemented RFC of HTTP using SOCKET programming in python3
 
 
+### Download this and store it into your home directory such that, This should be your path
+
+    /home/maniac/HTTP-Prajjwal/
+
+
 ### HOW TO RUN
 
 main file cotaining the code => httpserver.py
