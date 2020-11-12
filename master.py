@@ -8,8 +8,9 @@ while True:
     print("################################################################################\n################################################################################\n################################################################################\n\n")
     
     print("Starting the server ...")
-
-    # os.system(f'python3 httpServer.py {sys.argv[1]}')
+    # cmd = '''gnome-terminal -e "zsh -c \"python3 httpServer.py 5561; exec zsh\""'''
+    # os.system(cmd)
+    os.system(f'python3 httpServer.py {sys.argv[1]}')
     while True:
         print("q for quit\nr for restart.")
         key = input()
