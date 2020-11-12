@@ -440,3 +440,5 @@
 
 2020-11-12 22:49:05,896:httpServer.py:	127.0.0.1	36728	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
 
+2020-11-12 22:53:03,732:httpServer.py:	<socket.socket fd=23, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 36798)>	404
+
