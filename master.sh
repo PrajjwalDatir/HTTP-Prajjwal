@@ -2,11 +2,14 @@
 ################################################################################
 while true
 do
+echo "s to start, q to exit, r to start/ restart."
+
 read key
-if [[ "$key" == 's' || "$key" == 'r' ]]
+
+if [[ "$key" == 'r' ]]
 then
+    kill $(lsof -t -i:5561)
     gnome-terminal -e "zsh -c \"python3 httpServer.py 5561; exec zsh\""       
-    echo "press q to exit, r to restart."
 elif [[ "$key" == 'q' ]]
 then
     echo "Shutting Down... zzzz..."
@@ -14,14 +17,13 @@ then
     # fuser -k 5561/tcp
     kill $(lsof -t -i:5561)
     exit;
-    exit;
-elif [[ $key == 'r' ]]
+elif [[ $key == 's' ]]
 then
-    echo "Restarting :D"
+    echo "Starting :D"
     # killall zsh
-    kill $(lsof -t -i:5561)
-    exit;
-    exit;
+    # kill $(lsof -t -i:5561)
+    gnome-terminal -e "zsh -c \"python3 httpServer.py 5561; exec zsh\""       
+    
 else
     echo
 fi
