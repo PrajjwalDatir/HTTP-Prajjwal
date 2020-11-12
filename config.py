@@ -69,7 +69,7 @@ w.close()
 '''
 All data entered by the client is stored here for checking Purpose.
 '''
-CSVFILE = ROOT + '/action_page.csv'
+CSVFILE = ROOT + '/output.csv'
 w = open(CSVFILE, "a") # only appending not writing
 w.close()
 

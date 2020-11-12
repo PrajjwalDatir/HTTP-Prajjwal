@@ -50,3 +50,323 @@
 
 2020-11-12 20:42:06,884:httpServer.py:	192.168.43.12	47990	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
 
+2020-11-12 20:46:46,224:httpServer.py:	<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.43.12', 5561), raddr=('192.168.43.12', 59622)>	404
+
+2020-11-12 20:47:11,835:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.43.12', 5561), raddr=('192.168.43.12', 59644)>	404
+
+2020-11-12 20:47:14,130:httpServer.py:	<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.43.12', 5561), raddr=('192.168.43.12', 59646)>	404
+
+2020-11-12 20:47:15,844:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.43.12', 5561), raddr=('192.168.43.12', 59648)>	404
+
+2020-11-12 20:47:18,269:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.43.12', 5561), raddr=('192.168.43.12', 59650)>	404
+
+2020-11-12 20:47:20,086:httpServer.py:	192.168.43.12	59652	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	404
+
+2020-11-12 20:47:27,706:httpServer.py:	192.168.43.12	59654	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/PUT.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/PUT.py	404
+
+2020-11-12 20:47:29,885:httpServer.py:	192.168.43.12	59654	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/website HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/website	404
+
+2020-11-12 20:47:42,596:httpServer.py:	192.168.43.12	59656	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/website/index.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/website/index.html	404
+
+2020-11-12 20:50:15,543:httpServer.py:	192.168.43.12	59694	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	0
+
+2020-11-12 20:52:26,673:httpServer.py:	192.168.43.12	59716	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	0
+
+2020-11-12 20:54:29,176:httpServer.py:	192.168.43.12	59752	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/AI%20ppt.pdf HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/AI ppt.pdf	0
+
+2020-11-12 20:54:32,252:httpServer.py:	192.168.43.12	59752	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs	0
+
+2020-11-12 20:54:39,969:httpServer.py:	192.168.43.12	59754	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	0
+
+2020-11-12 20:54:42,449:httpServer.py:	192.168.43.12	59754	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py	0
+
+2020-11-12 20:54:44,383:httpServer.py:	192.168.43.12	59754	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/screenshot HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/screenshot	0
+
+2020-11-12 20:54:47,233:httpServer.py:	192.168.43.12	59762	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/audio.mp3 HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/audio.mp3	0
+
+2020-11-12 20:54:47,336:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.43.12', 5561), raddr=('192.168.43.12', 59762)>	404
+
+2020-11-12 20:54:50,905:httpServer.py:	192.168.43.12	59764	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/video.mp4 HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/video.mp4	404
+
+2020-11-12 20:55:01,389:httpServer.py:	192.168.43.12	59764	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	404
+
+2020-11-12 20:55:04,841:httpServer.py:	192.168.43.12	59766	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 20:55:09,156:httpServer.py:	192.168.43.12	59766	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 20:55:15,110:httpServer.py:	192.168.43.12	59766	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 20:57:03,596:httpServer.py:	192.168.43.12	48218	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	0
+
+2020-11-12 20:57:07,633:httpServer.py:	192.168.43.12	48220	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/httpServer.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/httpServer.py	0
+
+2020-11-12 20:58:48,268:httpServer.py:	192.168.43.12	59812	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	0
+
+2020-11-12 21:00:44,612:httpServer.py:	192.168.43.12	59844	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	0
+
+2020-11-12 21:01:32,734:httpServer.py:	192.168.43.12	48284	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	0
+
+2020-11-12 21:02:40,753:httpServer.py:	192.168.43.12	59882	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	0
+
+2020-11-12 21:02:53,564:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.43.12', 5561), raddr=('192.168.43.12', 59884)>	404
+
+2020-11-12 21:03:16,722:httpServer.py:	192.168.43.12	59886	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 21:03:33,736:httpServer.py:	192.168.43.12	59888	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 21:03:46,804:httpServer.py:	192.168.43.12	59888	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 21:04:05,247:httpServer.py:	192.168.43.12	59886	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/deleted HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/deleted	404
+
+2020-11-12 21:04:09,323:httpServer.py:	192.168.43.12	59894	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/DELETE.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/DELETE.py	404
+
+2020-11-12 21:04:16,512:httpServer.py:	192.168.43.12	59894	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs	404
+
+2020-11-12 21:04:18,640:httpServer.py:	192.168.43.12	59896	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/tcpGetHTTP.c HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/tcpGetHTTP.c	404
+
+2020-11-12 21:04:22,054:httpServer.py:	192.168.43.12	59896	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/RFC.md HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/RFC.md	404
+
+2020-11-12 21:04:45,223:httpServer.py:	192.168.43.12	59888	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/RFC.md HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/RFC.md	404
+
+2020-11-12 21:04:57,810:httpServer.py:	192.168.43.12	59906	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/RFC.md?maniac=sudo HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/RFC.md	404
+
+2020-11-12 21:05:29,904:httpServer.py:	192.168.43.12	59910	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/RFC.md?http=sudo HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/RFC.md	404
+
+2020-11-12 21:06:01,298:httpServer.py:	192.168.43.12	59916	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/RFC.md?http=sudo HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/RFC.md	404
+
+2020-11-12 21:55:25,977:httpServer.py:	127.0.0.1	49818	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	0
+
+2020-11-12 21:55:26,364:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 49820)>	404
+
+2020-11-12 21:56:30,172:httpServer.py:	127.0.0.1	35642	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	0
+
+2020-11-12 21:56:30,514:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 35644)>	404
+
+2020-11-12 21:56:41,664:httpServer.py:	127.0.0.1	35652	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/README.md HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/README.md	404
+
+2020-11-12 21:56:49,285:httpServer.py:	127.0.0.1	35652	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 21:56:55,168:httpServer.py:	127.0.0.1	35652	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/config.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/config.py	404
+
+2020-11-12 21:57:01,041:httpServer.py:	127.0.0.1	35652	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/workfile.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/workfile.html	404
+
+2020-11-12 21:57:08,539:httpServer.py:	127.0.0.1	35652	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/AI%20ppt.pdf HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/AI ppt.pdf	404
+
+2020-11-12 21:57:12,216:httpServer.py:	127.0.0.1	35652	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:00:30,647:httpServer.py:	127.0.0.1	35652	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:01:38,810:httpServer.py:	127.0.0.1	35690	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:01:58,038:httpServer.py:	127.0.0.1	35692	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:02:05,121:httpServer.py:	127.0.0.1	35694	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:02:05,123:httpServer.py:	127.0.0.1	35696	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:02:31,876:httpServer.py:	127.0.0.1	35704	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:02:31,877:httpServer.py:	127.0.0.1	35706	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:02:31,878:httpServer.py:	127.0.0.1	35708	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:03:52,006:httpServer.py:	127.0.0.1	35652	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py	404
+
+2020-11-12 22:04:18,552:httpServer.py:	127.0.0.1	35754	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:04:18,554:httpServer.py:	127.0.0.1	35756	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:04:18,555:httpServer.py:	127.0.0.1	35758	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:04:18,556:httpServer.py:	127.0.0.1	35760	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py	404
+
+2020-11-12 22:07:12,272:httpServer.py:	127.0.0.1	35780	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:07:12,274:httpServer.py:	127.0.0.1	35782	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:07:12,275:httpServer.py:	127.0.0.1	35784	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:07:12,276:httpServer.py:	127.0.0.1	35786	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py	404
+
+2020-11-12 22:07:12,277:httpServer.py:	127.0.0.1	35788	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:08:21,275:httpServer.py:	127.0.0.1	35808	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:08:21,277:httpServer.py:	127.0.0.1	35810	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:08:21,278:httpServer.py:	127.0.0.1	35812	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:08:21,279:httpServer.py:	127.0.0.1	35814	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py	404
+
+2020-11-12 22:08:21,280:httpServer.py:	127.0.0.1	35816	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:09:12,191:httpServer.py:	127.0.0.1	35830	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:09:12,192:httpServer.py:	127.0.0.1	35832	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:09:12,193:httpServer.py:	127.0.0.1	35834	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:09:12,194:httpServer.py:	127.0.0.1	35836	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py	404
+
+2020-11-12 22:09:12,196:httpServer.py:	127.0.0.1	35838	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:11:25,968:httpServer.py:	127.0.0.1	35874	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:11:25,970:httpServer.py:	127.0.0.1	35876	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:11:25,971:httpServer.py:	127.0.0.1	35878	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:11:25,972:httpServer.py:	127.0.0.1	35880	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py	404
+
+2020-11-12 22:11:25,974:httpServer.py:	127.0.0.1	35882	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:11:31,940:httpServer.py:	127.0.0.1	35884	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:11:31,942:httpServer.py:	127.0.0.1	35886	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:11:31,945:httpServer.py:	127.0.0.1	35888	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:11:31,946:httpServer.py:	127.0.0.1	35890	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py	404
+
+2020-11-12 22:11:31,947:httpServer.py:	127.0.0.1	35892	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:11:37,285:httpServer.py:	127.0.0.1	35894	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:11:37,287:httpServer.py:	127.0.0.1	35896	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:11:37,289:httpServer.py:	127.0.0.1	35898	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:11:37,291:httpServer.py:	127.0.0.1	35900	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py	404
+
+2020-11-12 22:11:37,292:httpServer.py:	127.0.0.1	35902	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:11:43,304:httpServer.py:	127.0.0.1	35906	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:11:43,306:httpServer.py:	127.0.0.1	35908	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:11:43,307:httpServer.py:	127.0.0.1	35910	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:11:43,308:httpServer.py:	127.0.0.1	35912	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py	404
+
+2020-11-12 22:11:43,309:httpServer.py:	127.0.0.1	35914	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:11:46,309:httpServer.py:	127.0.0.1	35916	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:11:46,311:httpServer.py:	127.0.0.1	35918	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:11:46,312:httpServer.py:	127.0.0.1	35920	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:11:46,313:httpServer.py:	127.0.0.1	35922	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py	404
+
+2020-11-12 22:11:46,314:httpServer.py:	127.0.0.1	35924	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:12:00,240:httpServer.py:	127.0.0.1	35928	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:12:00,242:httpServer.py:	127.0.0.1	35930	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:12:00,243:httpServer.py:	127.0.0.1	35932	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:12:00,244:httpServer.py:	127.0.0.1	35934	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py	404
+
+2020-11-12 22:12:00,245:httpServer.py:	127.0.0.1	35936	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:13:56,577:httpServer.py:	127.0.0.1	35966	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/POST.py	404
+
+2020-11-12 22:14:05,726:httpServer.py:	127.0.0.1	35966	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	404
+
+2020-11-12 22:14:10,719:httpServer.py:	127.0.0.1	35972	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 22:15:20,267:httpServer.py:	127.0.0.1	35986	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	404
+
+2020-11-12 22:15:20,269:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 35988)>	403
+
+2020-11-12 22:15:20,270:httpServer.py:	127.0.0.1	35990	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	403
+
+2020-11-12 22:15:20,271:httpServer.py:	127.0.0.1	35992	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	403
+
+2020-11-12 22:15:20,272:httpServer.py:	127.0.0.1	35994	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	403
+
+2020-11-12 22:16:43,345:httpServer.py:	127.0.0.1	36016	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	403
+
+2020-11-12 22:16:43,347:httpServer.py:	<socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 36018)>	403
+
+2020-11-12 22:16:43,348:httpServer.py:	127.0.0.1	36020	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	403
+
+2020-11-12 22:16:43,349:httpServer.py:	127.0.0.1	36022	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	403
+
+2020-11-12 22:16:43,350:httpServer.py:	127.0.0.1	36024	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	403
+
+2020-11-12 22:18:26,049:httpServer.py:	127.0.0.1	36044	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	403
+
+2020-11-12 22:18:26,051:httpServer.py:	<socket.socket fd=21, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 36046)>	403
+
+2020-11-12 22:18:26,052:httpServer.py:	127.0.0.1	36048	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	403
+
+2020-11-12 22:18:26,053:httpServer.py:	127.0.0.1	36050	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	403
+
+2020-11-12 22:18:26,054:httpServer.py:	127.0.0.1	36052	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	403
+
+2020-11-12 22:18:31,273:httpServer.py:	127.0.0.1	36056	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	403
+
+2020-11-12 22:18:31,274:httpServer.py:	<socket.socket fd=21, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 36058)>	403
+
+2020-11-12 22:18:31,276:httpServer.py:	127.0.0.1	36060	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	403
+
+2020-11-12 22:18:31,277:httpServer.py:	127.0.0.1	36062	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	403
+
+2020-11-12 22:18:31,278:httpServer.py:	127.0.0.1	36064	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	403
+
+2020-11-12 22:19:53,936:httpServer.py:	127.0.0.1	36084	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	0
+
+2020-11-12 22:19:53,938:httpServer.py:	127.0.0.1	36086	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	0
+
+2020-11-12 22:19:53,939:httpServer.py:	127.0.0.1	36088	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	0
+
+2020-11-12 22:19:53,940:httpServer.py:	127.0.0.1	36090	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	0
+
+2020-11-12 22:19:53,941:httpServer.py:	127.0.0.1	36092	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	0
+
+2020-11-12 22:20:31,427:httpServer.py:	127.0.0.1	36100	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	0
+
+2020-11-12 22:20:31,429:httpServer.py:	127.0.0.1	36102	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/testing/output.txt HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/testing/output.txt	0
+
+2020-11-12 22:20:31,430:httpServer.py:	127.0.0.1	36104	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	0
+
+2020-11-12 22:20:31,432:httpServer.py:	127.0.0.1	36106	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	0
+
+2020-11-12 22:20:31,433:httpServer.py:	127.0.0.1	36108	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	0
+
+2020-11-12 22:21:55,659:httpServer.py:	127.0.0.1	36128	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	0
+
+2020-11-12 22:21:55,660:httpServer.py:	127.0.0.1	36130	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.txt HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.txt	0
+
+2020-11-12 22:21:55,661:httpServer.py:	127.0.0.1	36132	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	0
+
+2020-11-12 22:21:55,663:httpServer.py:	127.0.0.1	36134	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	0
+
+2020-11-12 22:21:55,664:httpServer.py:	127.0.0.1	36136	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	0
+
+2020-11-12 22:31:40,016:httpServer.py:	127.0.0.1	36346	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	0
+
+2020-11-12 22:32:34,406:httpServer.py:	127.0.0.1	36356	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	0
+
+2020-11-12 22:32:34,408:httpServer.py:	127.0.0.1	36358	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	0
+
+2020-11-12 22:32:34,409:httpServer.py:	127.0.0.1	36360	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.txt HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.txt	0
+
+2020-11-12 22:32:34,411:httpServer.py:	127.0.0.1	36362	PUT /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	0
+
+2020-11-12 22:32:34,412:httpServer.py:	127.0.0.1	36364	DELETE /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/output.csv	0
+
+2020-11-12 22:32:34,413:httpServer.py:	127.0.0.1	36366	HEAD /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	0
+
+2020-11-12 22:33:39,811:httpServer.py:	127.0.0.1	36374	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	0
+
+2020-11-12 22:33:41,631:httpServer.py:	127.0.0.1	36374	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	0
+
+2020-11-12 22:33:42,366:httpServer.py:	127.0.0.1	36374	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	0
+
+2020-11-12 22:33:42,980:httpServer.py:	127.0.0.1	36374	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	0
+
+2020-11-12 22:34:04,664:httpServer.py:	127.0.0.1	36374	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	0
+

@@ -1,6 +1,20 @@
 # HTTP Webserver From Scratch
 ## Implemented RFC of HTTP using SOCKET programming in python3
 
+
+### HOW TO RUN
+
+main file cotaining the code => httpserver.py
+
+#### To run main file with restart,start, quit functionality running in SEPARATE window
+    bash master.sh
+#### To run main file with restart,start, quit functionality running in SAME window
+    python3 master.py port_number
+
+#### To Test the program Run
+    python3 testing/autoTest.py 5562
+
+
 # HTTP-Web-Server
 This is the project based on http protocol that has been used in day to day life. All dimensions are considered according to rfc 2616
 

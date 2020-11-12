@@ -1,23 +1,19 @@
-from socket import *         # to implement webserver
-from datetime import *		 # to implement conditional get
-import os					 # to use basic facilities of checking path,file, directory
-import time					 # to implement conditional get
-import random				 # to implement randomness so that some of the status codes get implemented
-import threading			 # to handle requests coming to server
+from socket import *
+from datetime import *
+import os
+import time
+import random
+import threading
 from urllib.parse import *	 # for parsing URL/URI
 from _thread import *
 import shutil				 # to implement delete method
 import mimetypes			 # for getting extensions as well as content types
-import csv					 # used in get and post method to insert the data into file
+import csv					 # used in put and post method to insert data
 import base64				 # used for decoding autherization header in delete method
-import sys					 # for arguements, exits
-import logging				 # for logging
-from config import *         # import some variable values
+import sys
+import logging
+from config import *         # import variables
 import signal                # signal to handle Ctrl+C and other SIGNALS
-# from PUT import *
-# from POST import *
-# from GET_HEAD import *
-# from DELETE import *
 
 serversocket = socket(AF_INET, SOCK_STREAM)
 s = socket(AF_INET, SOCK_DGRAM)
@@ -37,7 +33,7 @@ conditional_get = False    	 # check : is it conditional get method?
 conn = True					 # to receive requests continuously in client's thread
 
 class methods:
-    def method_get_head(self,connectionsocket, element, switcher, query, method, glob):
+    def response_get_head(self,connectionsocket, element, switcher, query, method, glob):
         serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY = glob
         isfile = os.path.isfile(element)
         isdir = os.path.isdir(element)
@@ -220,7 +216,7 @@ class methods:
         else:
             status(connectionsocket, 400)
     
-    def method_post(self,ent_body, connectionsocket, switcher, glob):
+    def response_post(self,ent_body, connectionsocket, switcher, glob):
         ip, serverport,scode = glob
         display = []
         query = parse_qs(ent_body)
@@ -265,7 +261,7 @@ class methods:
         connectionsocket.send(encoded)
         connectionsocket.sendfile(f)
 
-    def method_put(self,connectionsocket, addr, ent_body, filedata, element, switcher, f_flag, scode):
+    def response_put(self,connectionsocket, addr, ent_body, filedata, element, switcher, f_flag, scode):
         display = []
         isfile = os.path.isfile(element)
         isdir = os.path.isdir(element)
@@ -377,7 +373,7 @@ class methods:
         display.append('\r\n')
         return display
 
-    def method_delete(self,element, connectionsocket, ent_body, switcher, glob):
+    def response_delete(self,element, connectionsocket, ent_body, switcher, glob):
         ip, serverport,scode = glob
         display = []
         option_list = element.split('/')
@@ -595,21 +591,22 @@ def bridgeFunction(connectionsocket, addr, start):
             switcher[line_list[0]] = line_list[1]
         if method == 'GET' or method == 'HEAD':
             # connectionsocket, element, switcher, query, method, glob
-            m.method_get_head(connectionsocket, element, switcher, query, method, 
+            m.response_get_head(connectionsocket, element, switcher, query, method, 
             [serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY])
         elif method == 'POST':
-            m.method_post(ent_body, connectionsocket, switcher, [ip,serverport, scode])
+            m.response_post(ent_body, connectionsocket, switcher, [ip,serverport, scode])
         elif method == 'PUT':
-            display = m.method_put(connectionsocket, addr, ent_body, filedata, element, switcher, f_flag, scode)
+            display = m.response_put(connectionsocket, addr, ent_body, filedata, element, switcher, f_flag, scode)
             encoded = '\r\n'.join(display).encode()
             connectionsocket.send(encoded)
         elif method == 'DELETE':
-            m.method_delete(element, connectionsocket, ent_body, switcher, [ip,serverport, scode])
+            m.response_delete(element, connectionsocket, ent_body, switcher, [ip,serverport, scode])
             conn = False
             connectionsocket.close()
         else:
             method = ''
             break
+        # use the logging formatting
         logging.info('	{}	{}	{}	{}	{}\n'.format(addr[0], addr[1], request_line, element, scode))
     try:
         connectionsocket.close()
@@ -623,7 +620,7 @@ def server():
     while True:
         start = 0
         connectionsocket, addr = serversocket.accept() # connectionsocket = request, addr = port,ip
-        # TODO print
+
         lthread.append(connectionsocket)  # add connections
         if(len(lthread) < MAX_REQUESTS):
             start_new_thread(bridgeFunction, (connectionsocket, addr, start))
@@ -642,32 +639,9 @@ def signal_handler(sig, frame):
     sys.exit(0)
 
 
-''' TO find the server's ip address
-Link : https://developers.google.com/speed/public-dns/docs/using
-above is the source of 8.8.8.8 ip
-'''
-def getMyIP():
-    try:
-        s.connect(('8.8.8.8', 8000))
-        IP = s.getsockname()[0]
-    except:
-        # localhost by default
-        IP = '127.0.0.1'
-    s.close()
-    return IP
-
-
 if __name__ == '__main__':
     # To run it on the localhost if you dont want google DNS
-    try:
-        if sys.argv[2] == 'localhost':
-            ip = '127.0.0.1'
-        else:
-            ip = str(getMyIP())
-    except:
-        pass
-    if not ip:
-        ip = str(getMyIP())
+    ip = '127.0.0.1'
     # print(ip)
     try:
         serverport = int(sys.argv[1])
@@ -681,6 +655,6 @@ if __name__ == '__main__':
         print('\nTO RUN\nType: python3 httpserver.py port_number')
         sys.exit()
     serversocket.listen(40)
-    print('HTTP server running on ip: ' + ip + ' port: ' + str(serverport) + '\nGo to this in the browser: (http://' + ip + ':' + str(serverport) +'/) + 'website/index.html')
+    print('HTTP server running on ip: ' + ip + ' port: ' + str(serverport) + '\nGo to this in the browser: (http://' + ip + ':' + str(serverport) + '/)')
     server()            # IMP calling the main server Function
     sys.exit()
