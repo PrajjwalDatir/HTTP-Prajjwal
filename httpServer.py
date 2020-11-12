@@ -14,6 +14,10 @@ import sys					 # for arguements, exits
 import logging				 # for logging
 from config import *         # import some variable values
 import signal                # signal to handle Ctrl+C and other SIGNALS
+# from PUT import *
+# from POST import *
+# from GET_HEAD import *
+# from DELETE import *
 
 serversocket = socket(AF_INET, SOCK_STREAM)
 s = socket(AF_INET, SOCK_DGRAM)
@@ -32,6 +36,407 @@ scode = 0                    # Status code initialization
 conditional_get = False    	 # check : is it conditional get method?
 conn = True					 # to receive requests continuously in client's thread
 
+class methods:
+    def method_get_head(self,connectionsocket, element, switcher, query, method, glob):
+        serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY = glob
+        isfile = os.path.isfile(element)
+        isdir = os.path.isdir(element)
+        display = []
+        if isfile:
+            if (os.access(element, os.W_OK) and os.access(element, os.R_OK)):
+                pass
+            else:
+                status(connectionsocket, 403)
+            display.append('HTTP/1.1 200 OK')
+            scode = 200
+            try:
+                f = open(element, "rb")
+                size = os.path.getsize(element)
+                data = f.read(size)
+            except:
+                status(connectionsocket, 500)
+        elif isdir:
+            if (os.access(element, os.W_OK) and os.access(element, os.R_OK)):
+                pass
+            else:
+                status(connectionsocket, 403)
+            display.append('HTTP/1.1 200 OK')
+            scode = 200
+            dir_list = os.listdir(element)
+            for i in dir_list:
+                if i.startswith('.'):
+                    dir_list.remove(i)
+        else:
+            element = element.rstrip('/')
+            isfile = os.path.isfile(element)
+            isdir = os.path.isdir(element)
+            if isfile:
+                if (os.access(element, os.W_OK) and os.access(element, os.R_OK)):
+                    pass
+                else:
+                    status(connectionsocket, 403)
+                display.append('HTTP/1.1 200 OK')
+                scode = 200
+                try:
+                    f = open(element, "rb")
+                    size = os.path.getsize(element)
+                    data = f.read(size)
+                except:
+                    status(connectionsocket, 500)
+            elif isdir:
+                if (os.access(element, os.W_OK) and os.access(element, os.R_OK)):
+                    pass
+                else:
+                    status(connectionsocket, 403)
+                display.append('HTTP/1.1 200 OK')
+                scode = 200
+                dir_list = os.listdir(element)
+                for i in dir_list:
+                    if i.startswith('.'):
+                        dir_list.remove(i)
+            else:	
+                status(connectionsocket, 404)
+        display.append(COOKIE + str(IDENTITY) + MAXAGE)
+        IDENTITY += 1
+        for state in switcher:
+            if state == 'Host':
+                pass
+            elif state == 'User-Agent':
+                if isfile:
+                    display.append('Server: ' + ip)
+                    display.append(date())
+                    display.append(last_modified(element))
+                elif isdir:
+                    display.append('Server: ' + ip)
+            elif state == 'Accept':
+                if isdir:
+                    string = 'Content-Type: text/html'
+                    display.append(string)
+                elif isfile:
+                    try:
+                        file_ext = os.path.splitext(element)
+                        if file_ext[1] in file_extension.keys():
+                            string = file_extension[file_ext[1]]
+                        else:
+                            string = 'text/plain'
+                        string = 'Content-Type: '+ string
+                        display.append(string)
+                    except:
+                        status(connectionsocket, 415)
+            elif state == 'Accept-Language':
+                if isfile:
+                    string = 'Content-Language: ' + switcher[state]
+                    display.append(string)
+                elif isdir:
+                    string = 'Content-Language: ' + switcher[state]
+                    display.append(string)
+            elif state == 'Accept-Encoding':
+                if isfile:
+                    string = 'Content-Length: ' + str(size)
+                    display.append(string)
+            elif state == 'Connection':
+                if isfile:
+                    conn = 	True
+                    display.append('Connection: keep-alive')
+                elif isdir:
+                    conn = False
+                    display.append('Connection: close')
+            elif state == 'If-Modified-Since':
+                if_modify(switcher[state], element)
+            elif state == 'Cookie':
+                IDENTITY -= 1 
+                display.remove(COOKIE + str(IDENTITY) + MAXAGE)
+            else:
+                continue
+        if isdir and method == 'GET':
+            display.append('\r\n')
+            display.append('<!DOCTYPE html>')
+            display.append('<html>\n<head>')
+            display.append('<title>Directory listing</title>')
+            display.append('<meta http-equiv="Content-type" content="text/html;charset=UTF-8" /></head>')
+            display.append('<body><h1>Directory listing..</h1><ul>')
+            for line in dir_list:
+                if element == '/':
+                    link = 'http://' + ip + ':' + str(serverport) + element + line
+                    l = '<li><a href ="'+link+'">'+line+'</a></li>'
+                    display.append(l)
+                else:
+                    link = 'http://' + ip + ':' + str(serverport) + element + '/'+ line
+                    l = '<li><a href ="'+link+'">'+line+'</a></li>'
+                    display.append(l)
+            display.append('</ul></body></html>')
+            encoded = '\r\n'.join(display).encode()
+            connectionsocket.send(encoded)
+            connectionsocket.close()
+        elif len(query) > 0 and not isdir and not isfile:
+            display = []
+            element = CSVFILE
+            fields = []
+            row = []
+            for d in query:
+                fields.append(d)
+                for i in query[d]:
+                    row.append(i)
+            check = os.path.exists(element)
+            if check:
+                fi = open(element, "a")
+                display.append('HTTP/1.1 200 OK')
+                scode = 200
+                csvwriter = csv.writer(fi)
+                csvwriter.writerow(row)
+            else:
+                fi = open(element, "w")
+                display.append('HTTP/1.1 201 Created')
+                scode = 201
+                display.append('Location: ' + element)
+                csvwriter = csv.writer(fi)
+                csvwriter.writerow(fields)
+                csvwriter.writerow(row)
+            fi.close()
+            display.append('Server: ' + ip)
+            display.append(date())
+            f = open(WORKFILE, "rb")
+            display.append('Content-Language: en-US,en')
+            size = os.path.getsize(WORKFILE)
+            string = 'Content-Length: ' + str(size)
+            display.append('Content-Type: text/html')
+            display.append(string)
+            display.append(last_modified(element))
+            display.append('\r\n')
+            encoded = '\r\n'.join(display).encode()
+            connectionsocket.send(encoded)
+            connectionsocket.sendfile(f)
+        elif isfile:
+            display.append('\r\n')
+            if conditional_get == False and method == 'GET':
+                encoded = '\r\n'.join(display).encode()
+                connectionsocket.send(encoded)
+                connectionsocket.sendfile(f)
+            elif conditional_get == False and method == 'HEAD':
+                encoded = '\r\n'.join(display).encode()
+                connectionsocket.send(encoded)
+            elif conditional_get == True and (method == 'GET' or method == 'HEAD'):
+                status_304(connectionsocket, element)
+        else:
+            status(connectionsocket, 400)
+    
+    def method_post(self,ent_body, connectionsocket, switcher, glob):
+        ip, serverport,scode = glob
+        display = []
+        query = parse_qs(ent_body)
+        element = CSVFILE
+        if os.access(element, os.W_OK):
+            pass
+        else:
+            status(connectionsocket, 403)
+        fields = []
+        row = []
+        for d in query:
+            fields.append(d)
+            for i in query[d]:
+                row.append(i)
+        check = os.path.exists(element)
+        if check:
+            fi = open(element, "a")
+            display.append('HTTP/1.1 200 OK')
+            scode = 200
+            csvwriter = csv.writer(fi)
+            csvwriter.writerow(row)
+        else:
+            fi = open(element, "w")
+            display.append('HTTP/1.1 201 Created')
+            scode = 201
+            display.append('Location: ' + element)
+            csvwriter = csv.writer(fi)
+            csvwriter.writerow(fields)
+            csvwriter.writerow(row)
+        fi.close()
+        display.append('Server: ' + ip)
+        display.append(date())
+        f = open(WORKFILE, "rb")
+        display.append('Content-Language: en-US,en')
+        size = os.path.getsize(WORKFILE)
+        string = 'Content-Length: ' + str(size)
+        display.append('Content-Type: text/html')
+        display.append(string)
+        display.append(last_modified(element))
+        display.append('\r\n')
+        encoded = '\r\n'.join(display).encode()
+        connectionsocket.send(encoded)
+        connectionsocket.sendfile(f)
+
+    def method_put(self,connectionsocket, addr, ent_body, filedata, element, switcher, f_flag, scode):
+        display = []
+        isfile = os.path.isfile(element)
+        isdir = os.path.isdir(element)
+        try:
+            length = int(switcher['Content-Length'])
+        except KeyError:
+            status(connectionsocket, 411)
+        q = int(length // SIZE)
+        r = length % SIZE
+        try:
+            filedata = filedata + ent_body
+        except TypeError:
+            ent_body = ent_body.encode()
+            filedata = filedata + ent_body
+        i = len(ent_body)
+        size = length - i
+        while size > 0:
+            ent_body = connectionsocket.recv(SIZE)
+            try:
+                filedata = filedata + ent_body
+            except TypeError:
+                ent_body = ent_body.encode()
+                filedata = filedata + ent_body
+            size = size - len(ent_body)
+        move_p, mode_f, r_201 = False, True, False
+        isfile = os.path.isfile(element)
+        isdir = os.path.isdir(element)
+        l = len(element)
+        limit = len(ROOT)
+        if l >= limit:
+            if isdir:
+                if os.access(element, os.W_OK):
+                    pass
+                else:
+                    status(connectionsocket, 403)
+                move_p = True
+                loc = ROOT + '/' + str(addr[1])
+                try:
+                    loc = loc + file_type[switcher['Content-Type'].split(';')[0]]
+                except:
+                    status(connectionsocket, 403)
+                if f_flag == 0:	
+                    f = open(loc, "w")
+                    f.write(filedata.decode())
+                else:
+                    f = open(loc, "wb")
+                    f.write(filedata)
+                f.close()
+            elif isfile:
+                if os.access(element, os.W_OK):
+                    pass
+                else:
+                    status(connectionsocket, 403)
+                mode_f = True
+                if f_flag == 0:	
+                    f = open(element, "w")
+                    f.write(filedata.decode())
+                else:
+                    f = open(element, "wb")
+                    f.write(filedata)
+                f.close()
+            else:
+                #r = random.randint(0,4)
+                if ROOT in element:
+                    r_201 = True
+                    element = ROOT + '/' + str(addr[1])
+                    try:
+                        element = element + file_type[switcher['Content-Type'].split(';')[0]]
+                    except:
+                        status(connectionsocket, 403)
+                    if f_flag == 0:	
+                        f = open(element, "w")
+                        f.write(filedata.decode())
+                    else:
+                        f = open(element, "wb")
+                        f.write(filedata)
+                    f.close()
+                else:
+                    mode_f = False
+        else:
+            move_p = True
+            loc = ROOT + '/' + str(addr[1])
+            try:
+                loc = loc + file_type[switcher['Content-Type']]
+            except:
+                status(connectionsocket, 403)
+            if f_flag == 0:	
+                f = open(loc, "w")
+            else:
+                f = open(loc, "wb")
+            f.write(filedata)
+            f.close()
+        if move_p:
+            scode = 301
+            display.append('HTTP/1.1 301 Moved Permanently')
+            display.append('Location: ' + loc)
+        elif mode_f:
+            scode = 204
+            display.append('HTTP/1.1 204 No Content')
+            display.append('Content-Location: ' + element)
+        elif r_201:
+            scode = 201
+            display.append('HTTP/1.1 201 Created')
+            display.append('Content-Location: ' + element)
+        elif not mode_f:
+            scode = 501
+            display.append('HTTP/1.1 501 Not Implemented')
+        display.append('Connection: keep-alive')
+        display.append('\r\n')
+        return display
+
+    def method_delete(self,element, connectionsocket, ent_body, switcher, glob):
+        ip, serverport,scode = glob
+        display = []
+        option_list = element.split('/')
+        isfile = os.path.isfile(element)
+        isdir = os.path.isdir(element)
+        if 'Authorization' in switcher.keys():
+            string = switcher['Authorization']
+            string = string.split(' ')
+            string = base64.decodebytes(string[1].encode()).decode()
+            string = string.split(':')
+            if string[0] == USERNAME and string[1] == PASSWORD:
+                pass
+            else:
+                scode = 401
+                display.append('HTTP/1.1 401 Unauthorized')
+                display.append('WWW-Authenticate: Basic')
+                display.append('\r\n')
+                encoded = '\r\n'.join(display).encode()
+                connectionsocket.send(encoded)
+                return
+        else:
+            scode = 401
+            display.append('HTTP/1.1 401 Unauthorized')
+            display.append('WWW-Authenticate: Basic')
+            display.append('\r\n')
+            encoded = '\r\n'.join(display).encode()
+            connectionsocket.send(encoded)
+            return
+        if len(ent_body) > 1 or 'delete' in option_list or isdir:
+            scode = 405
+            display.append('HTTP/1.1 405 Method Not Allowed')
+            display.append('Allow: OPTIONS, GET, HEAD, POST, PUT')
+        elif isfile:
+            a = random.randint(0,1)
+            if a == 0:
+                scode = 200
+                display.append('HTTP/1.1 200 OK')
+            else:
+                scode = 204
+                display.append('HTTP/1.1 204 No Content')
+            try:
+                if (os.access(element, os.W_OK) and os.access(element, os.R_OK)):
+                    pass
+                else:
+                    status(connectionsocket, 403)
+                shutil.move(element, DELETE)
+            except shutil.Error:
+                os.remove(element)
+        else:
+            scode = 400
+            display.append('HTTP/1.1 400 Bad Request')
+        display.append('Server: ' + ip)
+        display.append('Connection: keep-alive')
+        display.append(date())
+        display.append('\r\n')
+        encoded = '\r\n'.join(display).encode()
+        connectionsocket.send(encoded)
+
+m = methods()
 
 # function to fetch last modified date of the resource
 def last_modified(element):
@@ -127,413 +532,10 @@ def resolve(element):
     query = parse_qs(u.query)
     return (element, query)
 
-#function to implement post method 		
-def method_post(ent_body, connectionsocket, switcher):
-    global ip, scode
-    display = []
-    query = parse_qs(ent_body)
-    element = CSVFILE
-    if os.access(element, os.W_OK):
-        pass
-    else:
-        status(connectionsocket, 403)
-    fields = []
-    row = []
-    for d in query:
-        fields.append(d)
-        for i in query[d]:
-            row.append(i)
-    check = os.path.exists(element)
-    if check:
-        fi = open(element, "a")
-        display.append('HTTP/1.1 200 OK')
-        scode = 200
-        csvwriter = csv.writer(fi)
-        csvwriter.writerow(row)
-    else:
-        fi = open(element, "w")
-        display.append('HTTP/1.1 201 Created')
-        scode = 201
-        display.append('Location: ' + element)
-        csvwriter = csv.writer(fi)
-        csvwriter.writerow(fields)
-        csvwriter.writerow(row)
-    fi.close()
-    display.append('Server: ' + ip)
-    display.append(date())
-    f = open(WORKFILE, "rb")
-    display.append('Content-Language: en-US,en')
-    size = os.path.getsize(WORKFILE)
-    string = 'Content-Length: ' + str(size)
-    display.append('Content-Type: text/html')
-    display.append(string)
-    display.append(last_modified(element))
-    display.append('\r\n')
-    encoded = '\r\n'.join(display).encode()
-    connectionsocket.send(encoded)
-    connectionsocket.sendfile(f)
-
-#function to implement delete method
-def method_delete(element, connectionsocket, ent_body, switcher):
-    global ip, scode
-    display = []
-    option_list = element.split('/')
-    isfile = os.path.isfile(element)
-    isdir = os.path.isdir(element)
-    if 'Authorization' in switcher.keys():
-        string = switcher['Authorization']
-        string = string.split(' ')
-        string = base64.decodebytes(string[1].encode()).decode()
-        string = string.split(':')
-        if string[0] == USERNAME and string[1] == PASSWORD:
-            pass
-        else:
-            scode = 401
-            display.append('HTTP/1.1 401 Unauthorized')
-            display.append('WWW-Authenticate: Basic')
-            display.append('\r\n')
-            encoded = '\r\n'.join(display).encode()
-            connectionsocket.send(encoded)
-            return
-    else:
-        scode = 401
-        display.append('HTTP/1.1 401 Unauthorized')
-        display.append('WWW-Authenticate: Basic')
-        display.append('\r\n')
-        encoded = '\r\n'.join(display).encode()
-        connectionsocket.send(encoded)
-        return
-    if len(ent_body) > 1 or 'delete' in option_list or isdir:
-        scode = 405
-        display.append('HTTP/1.1 405 Method Not Allowed')
-        display.append('Allow: OPTIONS, GET, HEAD, POST, PUT')
-    elif isfile:
-        a = random.randint(0,1)
-        if a == 0:
-            scode = 200
-            display.append('HTTP/1.1 200 OK')
-        else:
-            scode = 204
-            display.append('HTTP/1.1 204 No Content')
-        try:
-            if (os.access(element, os.W_OK) and os.access(element, os.R_OK)):
-                pass
-            else:
-                status(connectionsocket, 403)
-            shutil.move(element, DELETE)
-        except shutil.Error:
-            os.remove(element)
-    else:
-        scode = 400
-        display.append('HTTP/1.1 400 Bad Request')
-    display.append('Server: ' + ip)
-    display.append('Connection: keep-alive')
-    display.append(date())
-    display.append('\r\n')
-    encoded = '\r\n'.join(display).encode()
-    connectionsocket.send(encoded)
-
-#function to implement get and head method
-def method_get_head(connectionsocket, element, switcher, query, method):
-    global serversocket, file_extension, conditional_get, conn, ip, scode, IDENTITY
-    isfile = os.path.isfile(element)
-    isdir = os.path.isdir(element)
-    display = []
-    if isfile:
-        if (os.access(element, os.W_OK) and os.access(element, os.R_OK)):
-            pass
-        else:
-            status(connectionsocket, 403)
-        display.append('HTTP/1.1 200 OK')
-        scode = 200
-        try:
-            f = open(element, "rb")
-            size = os.path.getsize(element)
-            data = f.read(size)
-        except:
-            status(connectionsocket, 500)
-    elif isdir:
-        if (os.access(element, os.W_OK) and os.access(element, os.R_OK)):
-            pass
-        else:
-            status(connectionsocket, 403)
-        display.append('HTTP/1.1 200 OK')
-        scode = 200
-        dir_list = os.listdir(element)
-        for i in dir_list:
-            if i.startswith('.'):
-                dir_list.remove(i)
-    else:
-        element = element.rstrip('/')
-        isfile = os.path.isfile(element)
-        isdir = os.path.isdir(element)
-        if isfile:
-            if (os.access(element, os.W_OK) and os.access(element, os.R_OK)):
-                pass
-            else:
-                status(connectionsocket, 403)
-            display.append('HTTP/1.1 200 OK')
-            scode = 200
-            try:
-                f = open(element, "rb")
-                size = os.path.getsize(element)
-                data = f.read(size)
-            except:
-                status(connectionsocket, 500)
-        elif isdir:
-            if (os.access(element, os.W_OK) and os.access(element, os.R_OK)):
-                pass
-            else:
-                status(connectionsocket, 403)
-            display.append('HTTP/1.1 200 OK')
-            scode = 200
-            dir_list = os.listdir(element)
-            for i in dir_list:
-                if i.startswith('.'):
-                    dir_list.remove(i)
-        else:	
-            status(connectionsocket, 404)
-    display.append(COOKIE + str(IDENTITY) + MAXAGE)
-    IDENTITY += 1
-    for state in switcher:
-        if state == 'Host':
-            pass
-        elif state == 'User-Agent':
-            if isfile:
-                display.append('Server: ' + ip)
-                display.append(date())
-                display.append(last_modified(element))
-            elif isdir:
-                display.append('Server: ' + ip)
-        elif state == 'Accept':
-            if isdir:
-                string = 'Content-Type: text/html'
-                display.append(string)
-            elif isfile:
-                try:
-                    file_ext = os.path.splitext(element)
-                    if file_ext[1] in file_extension.keys():
-                        string = file_extension[file_ext[1]]
-                    else:
-                        string = 'text/plain'
-                    string = 'Content-Type: '+ string
-                    display.append(string)
-                except:
-                    status(connectionsocket, 415)
-        elif state == 'Accept-Language':
-            if isfile:
-                string = 'Content-Language: ' + switcher[state]
-                display.append(string)
-            elif isdir:
-                string = 'Content-Language: ' + switcher[state]
-                display.append(string)
-        elif state == 'Accept-Encoding':
-            if isfile:
-                string = 'Content-Length: ' + str(size)
-                display.append(string)
-        elif state == 'Connection':
-            if isfile:
-                conn = 	True
-                display.append('Connection: keep-alive')
-            elif isdir:
-                conn = False
-                display.append('Connection: close')
-        elif state == 'If-Modified-Since':
-            if_modify(switcher[state], element)
-        elif state == 'Cookie':
-            IDENTITY -= 1 
-            display.remove(COOKIE + str(IDENTITY) + MAXAGE)
-        else:
-            continue
-    if isdir and method == 'GET':
-        display.append('\r\n')
-        display.append('<!DOCTYPE html>')
-        display.append('<html>\n<head>')
-        display.append('<title>Directory listing</title>')
-        display.append('<meta http-equiv="Content-type" content="text/html;charset=UTF-8" /></head>')
-        display.append('<body><h1>Directory listing..</h1><ul>')
-        for line in dir_list:
-            if element == '/':
-                link = 'http://' + ip + ':' + str(serverport) + element + line
-                l = '<li><a href ="'+link+'">'+line+'</a></li>'
-                display.append(l)
-            else:
-                link = 'http://' + ip + ':' + str(serverport) + element + '/'+ line
-                l = '<li><a href ="'+link+'">'+line+'</a></li>'
-                display.append(l)
-        display.append('</ul></body></html>')
-        encoded = '\r\n'.join(display).encode()
-        connectionsocket.send(encoded)
-        connectionsocket.close()
-    elif len(query) > 0 and not isdir and not isfile:
-        display = []
-        element = CSVFILE
-        fields = []
-        row = []
-        for d in query:
-            fields.append(d)
-            for i in query[d]:
-                row.append(i)
-        check = os.path.exists(element)
-        if check:
-            fi = open(element, "a")
-            display.append('HTTP/1.1 200 OK')
-            scode = 200
-            csvwriter = csv.writer(fi)
-            csvwriter.writerow(row)
-        else:
-            fi = open(element, "w")
-            display.append('HTTP/1.1 201 Created')
-            scode = 201
-            display.append('Location: ' + element)
-            csvwriter = csv.writer(fi)
-            csvwriter.writerow(fields)
-            csvwriter.writerow(row)
-        fi.close()
-        display.append('Server: ' + ip)
-        display.append(date())
-        f = open(WORKFILE, "rb")
-        display.append('Content-Language: en-US,en')
-        size = os.path.getsize(WORKFILE)
-        string = 'Content-Length: ' + str(size)
-        display.append('Content-Type: text/html')
-        display.append(string)
-        display.append(last_modified(element))
-        display.append('\r\n')
-        encoded = '\r\n'.join(display).encode()
-        connectionsocket.send(encoded)
-        connectionsocket.sendfile(f)
-    elif isfile:
-        display.append('\r\n')
-        if conditional_get == False and method == 'GET':
-            encoded = '\r\n'.join(display).encode()
-            connectionsocket.send(encoded)
-            connectionsocket.sendfile(f)
-        elif conditional_get == False and method == 'HEAD':
-            encoded = '\r\n'.join(display).encode()
-            connectionsocket.send(encoded)
-        elif conditional_get == True and (method == 'GET' or method == 'HEAD'):
-            status_304(connectionsocket, element)
-    else:
-        status(connectionsocket, 400)
-
-#function to implement put method
-def method_put(connectionsocket, addr, ent_body, filedata, element, switcher, f_flag):
-    global scode
-    display = []
-    isfile = os.path.isfile(element)
-    isdir = os.path.isdir(element)
-    try:
-        length = int(switcher['Content-Length'])
-    except KeyError:
-        status(connectionsocket, 411)
-    q = int(length // SIZE)
-    r = length % SIZE
-    try:
-        filedata = filedata + ent_body
-    except TypeError:
-        ent_body = ent_body.encode()
-        filedata = filedata + ent_body
-    i = len(ent_body)
-    size = length - i
-    while size > 0:
-        ent_body = connectionsocket.recv(SIZE)
-        try:
-            filedata = filedata + ent_body
-        except TypeError:
-            ent_body = ent_body.encode()
-            filedata = filedata + ent_body
-        size = size - len(ent_body)
-    move_p, mode_f, r_201 = False, True, False
-    isfile = os.path.isfile(element)
-    isdir = os.path.isdir(element)
-    l = len(element)
-    limit = len(ROOT)
-    if l >= limit:
-        if isdir:
-            if os.access(element, os.W_OK):
-                pass
-            else:
-                status(connectionsocket, 403)
-            move_p = True
-            loc = ROOT + '/' + str(addr[1])
-            try:
-                loc = loc + file_type[switcher['Content-Type'].split(';')[0]]
-            except:
-                status(connectionsocket, 403)
-            if f_flag == 0:	
-                f = open(loc, "w")
-                f.write(filedata.decode())
-            else:
-                f = open(loc, "wb")
-                f.write(filedata)
-            f.close()
-        elif isfile:
-            if os.access(element, os.W_OK):
-                pass
-            else:
-                status(connectionsocket, 403)
-            mode_f = True
-            if f_flag == 0:	
-                f = open(element, "w")
-                f.write(filedata.decode())
-            else:
-                f = open(element, "wb")
-                f.write(filedata)
-            f.close()
-        else:
-            #r = random.randint(0,4)
-            if ROOT in element:
-                r_201 = True
-                element = ROOT + '/' + str(addr[1])
-                try:
-                    element = element + file_type[switcher['Content-Type'].split(';')[0]]
-                except:
-                    status(connectionsocket, 403)
-                if f_flag == 0:	
-                    f = open(element, "w")
-                    f.write(filedata.decode())
-                else:
-                    f = open(element, "wb")
-                    f.write(filedata)
-                f.close()
-            else:
-                mode_f = False
-    else:
-        move_p = True
-        loc = ROOT + '/' + str(addr[1])
-        try:
-            loc = loc + file_type[switcher['Content-Type']]
-        except:
-            status(connectionsocket, 403)
-        if f_flag == 0:	
-            f = open(loc, "w")
-        else:
-            f = open(loc, "wb")
-        f.write(filedata)
-        f.close()
-    if move_p:
-        scode = 301
-        display.append('HTTP/1.1 301 Moved Permanently')
-        display.append('Location: ' + loc)
-    elif mode_f:
-        scode = 204
-        display.append('HTTP/1.1 204 No Content')
-        display.append('Content-Location: ' + element)
-    elif r_201:
-        scode = 201
-        display.append('HTTP/1.1 201 Created')
-        display.append('Content-Location: ' + element)
-    elif not mode_f:
-        scode = 501
-        display.append('HTTP/1.1 501 Not Implemented')
-    display.append('Connection: keep-alive')
-    display.append('\r\n')
-    return display
 
 #function which operate on top of the methods i.e bridge between response and requests
 def bridgeFunction(connectionsocket, addr, start):
-    global serversocket, file_extension, conditional_get, conn, SIZE, lthread, scode
+    global serversocket, file_extension, conditional_get, conn, SIZE, lthread, scode, ip, IDENTITY
     conditional_get = False
     f_flag = 0
     filedata = b""
@@ -545,7 +547,7 @@ def bridgeFunction(connectionsocket, addr, start):
             message = message.decode('utf-8')
             req_list = message.split('\r\n\r\n')
             # print req_list to see it
-            print(req_list)
+            # print(req_list)
             f_flag = 0
         except UnicodeDecodeError:
             # if you're using non UTF-8 chars
@@ -592,26 +594,17 @@ def bridgeFunction(connectionsocket, addr, start):
             line_list = line.split(': ')
             switcher[line_list[0]] = line_list[1]
         if method == 'GET' or method == 'HEAD':
-            method_get_head(connectionsocket, element, switcher, query, method)
+            # connectionsocket, element, switcher, query, method, glob
+            m.method_get_head(connectionsocket, element, switcher, query, method, 
+            [serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY])
         elif method == 'POST':
-            method_post(ent_body, connectionsocket, switcher)
+            m.method_post(ent_body, connectionsocket, switcher, [ip,serverport, scode])
         elif method == 'PUT':
-            display = method_put(connectionsocket, addr, ent_body, filedata, element, switcher, f_flag)
+            display = m.method_put(connectionsocket, addr, ent_body, filedata, element, switcher, f_flag, scode)
             encoded = '\r\n'.join(display).encode()
             connectionsocket.send(encoded)
         elif method == 'DELETE':
-            method_delete(element, connectionsocket, ent_body, switcher)
-            conn = False
-            connectionsocket.close()
-        elif method == 'CONNECT':
-            method_connect(connectionsocket, switcher)
-            conn = True
-        elif method == 'OPTIONS':
-            method_option(element, connectionsocket, switcher)
-            conn = False
-            connectionsocket.close()
-        elif method == 'TRACE':
-            method_trace(req_list[0], connectionsocket, switcher)
+            m.method_delete(element, connectionsocket, ent_body, switcher, [ip,serverport, scode])
             conn = False
             connectionsocket.close()
         else:
@@ -642,6 +635,7 @@ def server():
 '''
 Function to handle the exit ( Ctrl+C and other signals )
 '''
+sig_rec = False
 def signal_handler(sig, frame):
     print('You pressed Ctrl+C!')
     print("q for quit\n r for restart")
@@ -652,7 +646,7 @@ def signal_handler(sig, frame):
 Link : https://developers.google.com/speed/public-dns/docs/using
 above is the source of 8.8.8.8 ip
 '''
-def findip():
+def getMyIP():
     try:
         s.connect(('8.8.8.8', 8000))
         IP = s.getsockname()[0]
@@ -669,11 +663,11 @@ if __name__ == '__main__':
         if sys.argv[2] == 'localhost':
             ip = '127.0.0.1'
         else:
-            ip = str(findip())
+            ip = str(getMyIP())
     except:
         pass
     if not ip:
-        ip = str(findip())
+        ip = str(getMyIP())
     # print(ip)
     try:
         serverport = int(sys.argv[1])

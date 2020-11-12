@@ -16,6 +16,7 @@ then
 	# program to quit
     # fuser -k 5561/tcp
     kill $(lsof -t -i:5561)
+    # killall terminal
     exit;
 elif [[ $key == 's' ]]
 then

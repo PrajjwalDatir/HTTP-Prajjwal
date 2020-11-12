@@ -1,8 +1,6 @@
 # HTTP Webserver From Scratch
 ## Implemented RFC of HTTP using SOCKET programming in python3
 
-![HTTP image](./images/httpImg.png "HTTP image")
-
 # HTTP-Web-Server
 This is the project based on http protocol that has been used in day to day life. All dimensions are considered according to rfc 2616
 
@@ -36,7 +34,7 @@ the code as the developer also has the beginner level of knowledge in both
 	Config file and handling = 3 marks; cookies = 2 marks; log = 3 marks;  
 	file permissions = 1 marks; Automated Testing = 3 marks.
 
-### Here's PseudoCode we are going to refer to while building HTTP server. 
+### Here's PseudoCode I refered to while building HTTP server. 
 ```python
 webserver {
 	open a socket, bind to port 90

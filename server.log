@@ -1,34 +1,52 @@
-2020-11-11 17:17:46,119:httpServer.py:	192.168.43.12	41186	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	200
+2020-11-12 19:31:44,345:httpServer.py:	192.168.43.12	58326	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	200
 
-2020-11-11 17:17:51,625:httpServer.py:	192.168.43.12	41188	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/workfile.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/workfile.html	200
+2020-11-12 19:31:49,069:httpServer.py:	192.168.43.12	58328	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Post1Linkedin.png HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Post1Linkedin.png	200
 
-2020-11-11 17:18:03,118:httpServer.py:	192.168.43.12	41188	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/screenshot HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/screenshot	200
+2020-11-12 19:31:53,237:httpServer.py:	192.168.43.12	58328	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/AI%20ppt.pdf HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/AI ppt.pdf	200
 
-2020-11-11 17:18:07,270:httpServer.py:	192.168.43.12	41192	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/httpServer.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/httpServer.py	200
+2020-11-12 19:47:08,168:httpServer.py:	192.168.43.12	58698	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	200
 
-2020-11-11 17:19:37,232:httpServer.py:	192.168.43.12	41192	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/action_page.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/action_page.csv	200
+2020-11-12 19:47:17,332:httpServer.py:	192.168.43.12	58702	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/audio.mp3 HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/audio.mp3	200
 
-2020-11-11 17:19:39,297:httpServer.py:	192.168.43.12	41192	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs	200
+2020-11-12 19:47:21,857:httpServer.py:	192.168.43.12	58704	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/audio.ogg HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/audio.ogg	200
 
-2020-11-11 17:19:41,366:httpServer.py:	192.168.43.12	41194	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/RFC.md HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/RFC.md	200
+2020-11-12 19:47:23,657:httpServer.py:	192.168.43.12	58704	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/video.mp4 HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/video.mp4	200
 
-2020-11-11 17:19:44,711:httpServer.py:	192.168.43.12	41194	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/methods.md HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/Docs/methods.md	200
+2020-11-12 19:49:21,387:httpServer.py:	192.168.43.12	58722	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	200
 
-2020-11-11 17:19:50,233:httpServer.py:	192.168.43.12	41194	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/images HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/images	200
+2020-11-12 19:49:28,813:httpServer.py:	192.168.43.12	58724	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	200
 
-2020-11-11 17:19:51,576:httpServer.py:	192.168.43.12	41198	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/images/httpImg.png HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/images/httpImg.png	200
+2020-11-12 19:49:28,831:httpServer.py:	192.168.43.12	58724	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/images/httpImg.png HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/images/httpImg.png	200
 
-2020-11-11 17:19:55,445:httpServer.py:	192.168.43.12	41198	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/images/favicon.ico HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/images/favicon.ico	200
+2020-11-12 19:49:32,908:httpServer.py:	192.168.43.12	58724	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	200
 
-2020-11-11 17:19:59,832:httpServer.py:	192.168.43.12	41198	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/README.md HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/README.md	200
+2020-11-12 20:30:41,071:httpServer.py:	192.168.43.12	59406	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	0
 
-2020-11-11 17:20:22,472:httpServer.py:	192.168.43.12	41198	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/website HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/website	200
+2020-11-12 20:36:21,005:httpServer.py:	192.168.43.12	59478	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	0
 
-2020-11-11 17:20:26,380:httpServer.py:	192.168.43.12	41200	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/website/200put.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/website/200put.html	200
+2020-11-12 20:41:27,125:httpServer.py:	192.168.43.12	47982	GET / HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN	0
 
-2020-11-11 17:21:40,845:httpServer.py:	192.168.43.12	41200	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/website/byeworld.htm HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/website/byeworld.htm	200
+2020-11-12 20:41:34,482:httpServer.py:	192.168.43.12	47984	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/AI%20ppt.pdf HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/AI ppt.pdf	0
 
-2020-11-11 17:21:47,002:httpServer.py:	192.168.43.12	41200	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/deleted HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/deleted	200
+2020-11-12 20:41:37,194:httpServer.py:	192.168.43.12	47984	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/master.py	0
 
-2020-11-11 17:21:54,072:httpServer.py:	192.168.43.12	41206	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/testing HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/testing	200
+2020-11-12 20:41:43,074:httpServer.py:	192.168.43.12	47984	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/server.log HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/server.log	0
+
+2020-11-12 20:41:46,784:httpServer.py:	192.168.43.12	47984	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/action_page.csv HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/action_page.csv	0
+
+2020-11-12 20:41:49,140:httpServer.py:	192.168.43.12	47984	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/audio.mp3 HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/audio.mp3	0
+
+2020-11-12 20:41:49,247:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.43.12', 5562), raddr=('192.168.43.12', 47984)>	404
+
+2020-11-12 20:41:51,219:httpServer.py:	192.168.43.12	47988	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/video.mp4 HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/video.mp4	404
+
+2020-11-12 20:41:54,438:httpServer.py:	192.168.43.12	47988	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/.git HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/.git	404
+
+2020-11-12 20:41:57,509:httpServer.py:	192.168.43.12	47990	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/.git/FETCH_HEAD HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/.git/FETCH_HEAD	404
+
+2020-11-12 20:41:59,894:httpServer.py:	192.168.43.12	47990	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/workfile.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/workfile.html	404
+
+2020-11-12 20:42:01,846:httpServer.py:	192.168.43.12	47990	GET /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
+
+2020-11-12 20:42:06,884:httpServer.py:	192.168.43.12	47990	POST /home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html HTTP/1.1	/home/maniac/Downloads/Files_Maniac/PROJECTS/04Working/HTTP-web-server-V2/MYHTTP-webserver-CN/form.html	404
 
