@@ -1,12 +1,26 @@
 # https://realpython.com/python-requests/
 # Writing a testing program
+"""
+
+show_response = ""
+
+show_response += 'Server: ' + ip
+show_response += date()
+show_response += '\r\n\r\n'
+
+encoded = show_response.encode()
+connectionsocket.send(encoded)
+logging.info('	{}	{}\n'.format(connectionsocket, scode))
+
+"""
+
 import requests
 import sys
 port = int(sys.argv[1])
 url = 'http://127.0.0.1:' + str(port)
 
-data = {'fname':'http',
-    'lname':'sudo'
+data = {'username':'http',
+    'password':'sudo'
 }
 data2 = {'fname':'Prajjwal',
     'lname':'Datir'
@@ -18,7 +32,7 @@ s = requests.Session()
 
 '''Basic GET reqest'''
 try:
-    print("sending GET request...")
+    print("GET request:")
     response = s.get(url + getPath)
     '''In HTTP headers are case-insensitive so capital small doesn't matter!'''
     # response.headers
@@ -31,12 +45,13 @@ try:
     # response.headers['Status']
     if not response:
         print("Something's Wrong!\nResponse Not Recieved.")
-    print(f"Response recieved with status code: {response.status_code}")
+    print(f"text files opening succesfully\nstatus code: {response.status_code}\n\n")
 except Exception as err:
     print(f'Other error occurred: {err}')
 
+getPath = '/home/maniac/HTTP-Prajjwal/media/audio.mp3'
 try:
-    print("Checking Conditional GET...")
+    print("GET request:")
     response = s.get(url + getPath)
     '''In HTTP headers are case-insensitive so capital small doesn't matter!'''
     # response.headers
@@ -49,9 +64,28 @@ try:
     # response.headers['Status']
     if not response:
         print("Something's Wrong!\nResponse Not Recieved.")
-    print(f"Recieved with status code: {response.status_code}")
+    print(f"Media opening Succesfully\nstatus code: {response.status_code}\n")
 except Exception as err:
-    print(f'Other error occurred: {err}')
+    print(f'Other error occurred: {err}\n')
+
+getPath = '/home/maniac/HTTP-Prajjwal/media/index.mp3'
+try:
+    print("GET request:")
+    response = s.get(url + getPath)
+    '''In HTTP headers are case-insensitive so capital small doesn't matter!'''
+    # response.headers
+    # response.json()
+    # response.encoding = 'utf-8'
+    # response.text
+    # response.content
+    # response.headers['Content-Type']
+    # response.headers['Date']
+    # response.headers['Status']
+    if not response:
+        print("Something's Wrong!\nResponse Not Recieved.")
+    print(f"404 coming Succesfully\nstatus code: {response.status_code}\n")
+except Exception as err:
+    print(f'Other error occurred: {err}\n')
 
 postPath = "/home/maniac/HTTP-Prajjwal/output.csv"
 try:

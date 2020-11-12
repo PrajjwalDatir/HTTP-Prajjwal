@@ -442,3 +442,99 @@
 
 2020-11-12 22:53:03,732:httpServer.py:	<socket.socket fd=23, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 36798)>	404
 
+2020-11-12 22:55:15,074:httpServer.py:	127.0.0.1	36874	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	0
+
+2020-11-12 22:55:15,076:httpServer.py:	127.0.0.1	36874	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	0
+
+2020-11-12 22:55:15,078:httpServer.py:	127.0.0.1	36874	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	0
+
+2020-11-12 22:55:15,079:httpServer.py:	127.0.0.1	36876	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	0
+
+2020-11-12 22:55:15,081:httpServer.py:	127.0.0.1	36876	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	0
+
+2020-11-12 22:55:15,082:httpServer.py:	127.0.0.1	36878	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	0
+
+2020-11-12 22:57:11,576:httpServer.py:	127.0.0.1	36896	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	0
+
+2020-11-12 22:58:36,999:httpServer.py:	127.0.0.1	51098	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	0
+
+2020-11-12 22:58:37,000:httpServer.py:	127.0.0.1	51098	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	0
+
+2020-11-12 22:58:37,001:httpServer.py:	127.0.0.1	51098	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	0
+
+2020-11-12 22:58:37,002:httpServer.py:	127.0.0.1	51098	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	0
+
+2020-11-12 22:58:37,003:httpServer.py:	127.0.0.1	51098	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	0
+
+2020-11-12 22:58:37,005:httpServer.py:	127.0.0.1	51100	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	0
+
+2020-11-12 22:58:53,242:httpServer.py:	127.0.0.1	51104	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	0
+
+2020-11-12 22:58:56,692:httpServer.py:	127.0.0.1	51106	GET /home/maniac/HTTP-Prajjwal/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal/form.html	0
+
+2020-11-12 22:59:00,199:httpServer.py:	127.0.0.1	51106	GET /home/maniac/HTTP-Prajjwal/screenshot HTTP/1.1	/home/maniac/HTTP-Prajjwal/screenshot	0
+
+2020-11-12 22:59:08,304:httpServer.py:	127.0.0.1	51110	GET /home/maniac/HTTP-Prajjwal/images HTTP/1.1	/home/maniac/HTTP-Prajjwal/images	0
+
+2020-11-12 22:59:09,499:httpServer.py:	127.0.0.1	51116	GET /home/maniac/HTTP-Prajjwal/images/bfsdfs.cpp HTTP/1.1	/home/maniac/HTTP-Prajjwal/images/bfsdfs.cpp	0
+
+2020-11-12 22:59:12,889:httpServer.py:	127.0.0.1	51116	GET /home/maniac/HTTP-Prajjwal/images/card4.jpeg HTTP/1.1	/home/maniac/HTTP-Prajjwal/images/card4.jpeg	0
+
+2020-11-12 23:26:02,314:httpServer.py:	127.0.0.1	51514	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	0
+
+2020-11-12 23:26:07,154:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 51518)>	404
+
+2020-11-12 23:27:21,834:httpServer.py:	127.0.0.1	51534	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
+
+2020-11-12 23:27:21,835:httpServer.py:	127.0.0.1	51534	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	404
+
+2020-11-12 23:27:21,836:httpServer.py:	127.0.0.1	51534	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	404
+
+2020-11-12 23:27:21,837:httpServer.py:	127.0.0.1	51536	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	404
+
+2020-11-12 23:27:21,838:httpServer.py:	127.0.0.1	51536	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	404
+
+2020-11-12 23:27:21,839:httpServer.py:	127.0.0.1	51538	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
+
+2020-11-12 23:28:38,095:httpServer.py:	127.0.0.1	51552	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
+
+2020-11-12 23:28:38,097:httpServer.py:	127.0.0.1	51552	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	404
+
+2020-11-12 23:28:38,098:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 51552)>	404
+
+2020-11-12 23:28:38,099:httpServer.py:	127.0.0.1	51554	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	404
+
+2020-11-12 23:28:38,101:httpServer.py:	127.0.0.1	51554	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	404
+
+2020-11-12 23:28:38,102:httpServer.py:	127.0.0.1	51554	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	404
+
+2020-11-12 23:28:38,103:httpServer.py:	127.0.0.1	51556	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	404
+
+2020-11-12 23:30:00,695:httpServer.py:	127.0.0.1	51588	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	404
+
+2020-11-12 23:30:08,097:httpServer.py:	127.0.0.1	51590	GET /home/maniac/HTTP-Prajjwal/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal/form.html	404
+
+2020-11-12 23:30:17,183:httpServer.py:	<socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 51590)>	404
+
+2020-11-12 23:30:21,271:httpServer.py:	127.0.0.1	51596	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	404
+
+2020-11-12 23:56:02,762:httpServer.py:	127.0.0.1	51954	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	0
+
+2020-11-12 23:56:05,012:httpServer.py:	127.0.0.1	51958	GET /home/maniac/HTTP-Prajjwal/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal/form.html	0
+
+2020-11-13 00:30:11,898:httpServer.py:	127.0.0.1	52544	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	0
+
+2020-11-13 00:30:29,377:httpServer.py:	127.0.0.1	38366	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	0
+
+2020-11-13 00:38:26,264:httpServer.py:	127.0.0.1	38458	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	0
+
+2020-11-13 00:43:36,053:httpServer.py:	127.0.0.1	38538	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	0
+
+2020-11-13 00:43:45,258:httpServer.py:	127.0.0.1	38542	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	0
+
+2020-11-13 00:44:57,679:httpServer.py:	127.0.0.1	52768	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	0
+
+2020-11-13 00:45:09,694:httpServer.py:	127.0.0.1	52774	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal	0
+
+2020-11-13 00:45:21,012:httpServer.py:	127.0.0.1	52780	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	0
+

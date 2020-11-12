@@ -28,12 +28,12 @@ RUNNING_VERSION = '1.1'
 '''
 Number of Thread Requests handled by the server at one time
 '''
-MAX_REQUESTS = 100
+MAX_REQUEST = 20
 
 '''
 Maximum URL length supported by the server at the time of establishing new connection
 '''
-MAX_URL = 150
+MAX_URL = 250
 
 '''
 log file path so that we can write into it
@@ -265,7 +265,9 @@ status_codes = {
 		412 : "Precondition Failed",
 		414 : "URI too long",
 		415 : "Unsupported media Type",
+        500 : "Internal Server Error",
 		501 : "Not Implemented",
+        503 : "Server Unavailable",
 		505 : "HTTP version not supported",
 	}
 
