@@ -533,7 +533,7 @@ def method_put(connectionsocket, addr, ent_body, filedata, element, switcher, f_
 
 #function which operate on top of the methods i.e bridge between response and requests
 def bridgeFunction(connectionsocket, addr, start):
-    global serversocket, file_extension, conditional_get, conn, SIZE, lthread, SERVER, MAIN, scode
+    global serversocket, file_extension, conditional_get, conn, SIZE, lthread, scode
     conditional_get = False
     f_flag = 0
     filedata = b""
