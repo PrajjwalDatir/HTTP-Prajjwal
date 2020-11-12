@@ -681,6 +681,6 @@ if __name__ == '__main__':
         print('\nTO RUN\nType: python3 httpserver.py port_number')
         sys.exit()
     serversocket.listen(40)
-    print('HTTP server running on ip: ' + ip + ' port: ' + str(serverport) + '\nGo to this in the browser: (http://' + ip + ':' + str(serverport) +'/)')
+    print('HTTP server running on ip: ' + ip + ' port: ' + str(serverport) + '\nGo to this in the browser: (http://' + ip + ':' + str(serverport) +'/) + 'website/index.html')
     server()            # IMP calling the main server Function
     sys.exit()
