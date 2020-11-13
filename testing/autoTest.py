@@ -54,19 +54,23 @@ try:
     print("GET request:")
     response = s.get(url + getPath)
     '''In HTTP headers are case-insensitive so capital small doesn't matter!'''
-    # response.headers
-    # response.json()
-    # response.encoding = 'utf-8'
-    # response.text
-    # response.content
-    # response.headers['Content-Type']
-    # response.headers['Date']
-    # response.headers['Status']
     if not response:
         print("Something's Wrong!\nResponse Not Recieved.")
     print(f"Media opening Succesfully\nstatus code: {response.status_code}\n")
 except Exception as err:
     print(f'Other error occurred: {err}\n')
+
+getPath = '/home/maniac/HTTP-Prajjwal/media/audio.mp3'
+try:
+    print("GET request:")
+    response = s.get(url + getPath)
+    '''In HTTP headers are case-insensitive so capital small doesn't matter!'''
+    if not response:
+        print("Something's Wrong!\nResponse Not Recieved.")
+    print(f"Media opening Succesfully\nstatus code: {response.status_code}\n")
+except Exception as err:
+    print(f'Other error occurred: {err}\n')
+
 
 getPath = '/home/maniac/HTTP-Prajjwal/media/index.mp3'
 try:
