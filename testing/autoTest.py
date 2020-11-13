@@ -66,7 +66,7 @@ try:
     response = s.get(url + getPath)
     '''In HTTP headers are case-insensitive so capital small doesn't matter!'''
     if not response:
-        print("Something's Wrong!\nResponse Not Recieved.")
+        print("Something's Wrong!\nResponse Not Recieved")
     print(f"Media opening Succesfully\nstatus code: {response.status_code}\n")
 except Exception as err:
     print(f'Other error occurred: {err}\n')
@@ -86,14 +86,14 @@ try:
     # response.headers['Date']
     # response.headers['Status']
     if not response:
-        print("Something's Wrong!\nResponse Not Recieved.")
-    print(f"404 coming Succesfully\nstatus code: {response.status_code}\n")
+        print("404 coming Succesfully.")
+    print(f"status code: {response.status_code}\n")
 except Exception as err:
-    print(f'Other error occurred: {err}\n')
+    print(f'Other error occurred: {err}')
 
 postPath = "/home/maniac/HTTP-Prajjwal/output.csv"
 try:
-    print("sending POST request...")
+    print("\nsending POST request...")
     response = s.post( url+postPath, json=data)
     if not response:
         print("Something's Wrong!\nResponse Not Recieved.")
@@ -103,7 +103,7 @@ except Exception as err:
 
 putPath = "/home/maniac/HTTP-Prajjwal/output.csv"
 try:
-    print("sending PUT request...")
+    print("\nsending PUT request...")
     response = s.put(url+putPath, json=data2)
     if not response:
         print("Something's Wrong!\nResponse Not Recieved.")
@@ -113,7 +113,7 @@ except Exception as err:
 
 delPath = "/home/maniac/HTTP-Prajjwal/testing/deleteme1"
 try:
-    print("sending DELETE request...")
+    print("\nsending DELETE request...")
     response = s.delete(url + delPath)
     if not response:
         if response.status_code == 401:
@@ -124,7 +124,7 @@ except Exception as err:
 
 headPath = "/home/maniac/HTTP-Prajjwal/test.txt"
 try:
-    print("sending HEAD request...")
+    print("\nsending HEAD request...")
     response = s.head(url + headPath)
     if not response:
         print("Something's Wrong!\nResponse Not Recieved.")

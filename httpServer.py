@@ -15,18 +15,18 @@ import signal                           # signal to handle Ctrl+C and other SIGN
 from supplement.breakdown import *      # to breakdown entity
 from supplement.last_modified import *  # last_modified for condi get
 
+ip = None                    # IP 
+conn = True					 # to receive requests continuously in client's thread
+scode = 0                    # Status code initialization
 
 IDENTITY = 0                 # Cookie ID . This project Increments it by 1   
-
-ip = None                    # IP 
-file_extension = FORMAT      # Dictionary to convert file extentions into the content types eg. .html to text/html
-file_type = FORMAT2          # Dictionary to convert content types into the file extentions eg. text/html to .html
-
-scode = 0                    # Status code initialization
 conditional_get = False    	 # check : is it conditional get method?
-conn = True					 # to receive requests continuously in client's thread
-client_thread = []		     # list to work with the threads
 month = MONTH
+
+file_type = FORMAT2          # Dictionary to convert content types into the file extentions eg. text/html to .html
+file_extension = FORMAT      # Dictionary to convert file extentions into the content types eg. .html to text/html
+
+client_thread = []		     # list to work with the threads
 
 serversocket = socket(AF_INET, SOCK_STREAM)
 s = socket(AF_INET, SOCK_DGRAM)
@@ -71,9 +71,9 @@ class methods:
         f = open(WORKFILE, "rb")
         show_response += '\r\nContent-Language: en-US,en'
         size = os.path.getsize(WORKFILE)
-        string = 'Content-Length: ' + str(size)
+        conversation = 'Content-Length: ' + str(size)
         show_response += '\r\nContent-Type: text/html'
-        show_response += '\r\n' + string
+        show_response += '\r\n' + conversation
         show_response += '\r\n' + last_modified(entity)
         show_response += '\r\n\r\n'
         encoded = show_response.encode()
@@ -87,6 +87,8 @@ class methods:
         isdir = os.path.isdir(entity)
         show_response = ''
         if isfile:
+            show_response += 'HTTP/1.1 200 OK'
+            scode = 200
             if (os.access(entity, os.R_OK)):
                 if (os.access(entity, os.W_OK)):
                     pass
@@ -94,8 +96,6 @@ class methods:
                     status(connectionsocket, 403)
             else:
                 status(connectionsocket, 403)
-            show_response += 'HTTP/1.1 200 OK'
-            scode = 200
             try:
                 f = open(entity, "rb")
                 size = os.path.getsize(entity)
@@ -103,6 +103,10 @@ class methods:
             except:
                 status(connectionsocket, 500)
         elif isdir:
+            dir_list = os.listdir(entity)
+            show_response += 'HTTP/1.1 200 OK'
+            scode = 200
+            # if it is a directory
             if os.access(entity, os.R_OK):
                 if (os.access(entity, os.W_OK)):
                     pass
@@ -110,81 +114,86 @@ class methods:
                     status(connectionsocket, 403)
             else:
                 status(connectionsocket, 403)
-            show_response += 'HTTP/1.1 200 OK'
-            scode = 200
-            dir_list = os.listdir(entity)
             for i in dir_list:
                 if i.startswith('.'):
                     dir_list.remove(i)
+                else:
+                    pass
         else:
             entity = entity.rstrip('/')
             isdir = os.path.isdir(entity)
             isfile = os.path.isfile(entity)
             if isfile:
+                show_response += 'HTTP/1.1 200 OK'
+                scode = 200
                 if (os.access(entity, os.R_OK)):
                     if (os.access(entity, os.W_OK)):
                         pass
                 else:
                     status(connectionsocket, 403)
-                show_response += 'HTTP/1.1 200 OK'
-                scode = 200
                 try:
-                    f = open(entity, "rb")
                     size = os.path.getsize(entity)
+                    f = open(entity, "rb")
                     data = f.read(size)
                 except:
+                    # error while accesing the file
                     status(connectionsocket, 500)
             elif isdir:
-                if (os.access(entity, os.W_OK) and os.access(entity, os.R_OK)):
-                    pass
+                scode = 200
+                show_response += 'HTTP/1.1 200 OK'
+                dir_list = os.listdir(entity)
+                if (os.access(entity, os.W_OK)):
+                    if (os.access(entity, os.R_OK)):
+                        pass
+                    else:
+                        status(connectionsocket, 403)
                 else:
                     status(connectionsocket, 403)
-                show_response += 'HTTP/1.1 200 OK'
-                scode = 200
-                dir_list = os.listdir(entity)
                 for i in dir_list:
                     if i.startswith('.'):
                         dir_list.remove(i)
+                    else:
+                        pass
             else:	
                 status(connectionsocket, 404)
         show_response += '\r\n' + COOKIE + str(IDENTITY) + MAXAGE
-        IDENTITY += 10
+        IDENTITY += random.randint(1,10)
         for state in switcher:
-            if state == 'Host':
-                pass
-            elif state == 'User-Agent':
+            if state == 'User-Agent':
                 if isfile:
                     show_response += '\r\nServer: ' + ip
                     l = time.ctime().split(' ')
                     l[0] = l[0] + ','
-                    string = (' ').join(l)
-                    string = '\r\nDate: ' + string
-                    show_response += string
+                    conversation = (' ').join(l)
+                    conversation = '\r\nDate: ' + conversation
+                    show_response += conversation
                     show_response += '\r\n' + last_modified(entity)
                 elif isdir:
                     show_response += '\r\nServer: ' + ip
+            elif state == 'Host':
+                pass
             elif state == 'Accept':
                 if isdir:
-                    string = '\r\nContent-Type: text/html'
-                    show_response += string
+                    conversation = '\r\nContent-Type: text/html'
+                    show_response += conversation
                 elif isfile:
                     try:
                         file_ext = os.path.splitext(entity)
                         if file_ext[1] in file_extension.keys():
-                            string = file_extension[file_ext[1]]
+                            conversation = file_extension[file_ext[1]]
                         else:
-                            string = 'text/plain'
-                        string = '\r\nContent-Type: '+ string
-                        show_response += string
+                            conversation = 'text/plain'
+                        conversation = '\r\nContent-Type: '+ conversation
+                        show_response += conversation
                     except:
                         status(connectionsocket, 415)
             elif state == 'Accept-Language':
-                string = '\r\nContent-Language: ' + switcher[state]
-                show_response += string
+                conversation = '\r\nContent-Language: ' + switcher[state]
+                show_response += conversation
             elif state == 'Accept-Encoding':
                 if isfile:
-                    string = '\r\nContent-Length: ' + str(size)
-                    show_response += string
+                    conversation = '\r\nContent-Length: ' + str(size)
+                    show_response += conversation
             elif state == 'Connection':
                 if isfile:
                     conn = True
@@ -246,9 +255,9 @@ class methods:
             f = open(WORKFILE, "rb")
             show_response += '\r\nContent-Language: en-US,en'
             size = os.path.getsize(WORKFILE)
-            string = '\r\nContent-Length: ' + str(size)
+            conversation = '\r\nContent-Length: ' + str(size)
             show_response += '\r\nContent-Type: text/html'
-            show_response += string
+            show_response += conversation
             show_response += '\r\n' +last_modified(entity)
             show_response += '\r\n\r\n'
             encoded = show_response.encode()
@@ -286,7 +295,9 @@ class methods:
             filedata = filedata + ent_body
         i = len(ent_body)
         size = length - i
-        while size > 0:
+        for _ in iter(int, 1):
+            if not size > 0:
+                break
             ent_body = connectionsocket.recv(SIZE)
             try:
                 filedata = filedata + ent_body
@@ -389,12 +400,12 @@ class methods:
         isfile = os.path.isfile(entity)
         option_list = entity.split('/')
         if 'Authorization' in switcher.keys():
-            string = switcher['Authorization']
-            string = string.split(' ')
-            string = base64.decodebytes(string[1].encode()).decode()
-            string = string.split(':')
-            if string[0] == USERNAME:
-                if string[1] == PASSWORD:
+            conversation = switcher['Authorization']
+            conversation = conversation.split(' ')
+            conversation = base64.decodebytes(conversation[1].encode()).decode()
+            conversation = conversation.split(':')
+            if conversation[0] == USERNAME:
+                if conversation[1] == PASSWORD:
                     pass
                 else:
                     scode = 401
@@ -477,9 +488,9 @@ def if_modify(state, entity):
 def date():
     l = time.ctime().split(' ')
     l[0] = l[0] + ','
-    string = (' ').join(l)
-    string = 'Date: ' + string
-    return string
+    conversation = (' ').join(l)
+    conversation = 'Date: ' + conversation
+    return conversation
 
 #function to give response if server is busy
 def status(connectionsocket, code):
@@ -538,7 +549,9 @@ def bridgeFunction(connectionsocket, addr, start):
     filedata = b""
     conn = True
     urlflag = 0
-    while conn :
+    for _ in iter(int, 1):
+        if not conn:
+            break
         message = connectionsocket.recv(SIZE)
         try:
             message = message.decode('utf-8')
@@ -622,16 +635,15 @@ def bridgeFunction(connectionsocket, addr, start):
 #function handling multiple requests
 def server():
     global client_thread
-    while True:
-        start = 0
+    for _ in iter(int, 1):
         connectionsocket, addr = serversocket.accept() # connectionsocket = request, addr = port,ip
-
+        start = 0
         client_thread.append(connectionsocket)  # add connections
-        if(len(client_thread) < MAX_REQUEST):
-            start_new_thread(bridgeFunction, (connectionsocket, addr, start))
-        else:
+        if not (len(client_thread) < MAX_REQUEST):
             status(connectionsocket, 503)
             connectionsocket.close()
+        else:
+            start_new_thread(bridgeFunction, (connectionsocket, addr, start))
     serversocket.close()
 
 '''
