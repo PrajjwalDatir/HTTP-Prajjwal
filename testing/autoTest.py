@@ -77,14 +77,6 @@ try:
     print("GET request:")
     response = s.get(url + getPath)
     '''In HTTP headers are case-insensitive so capital small doesn't matter!'''
-    # response.headers
-    # response.json()
-    # response.encoding = 'utf-8'
-    # response.text
-    # response.content
-    # response.headers['Content-Type']
-    # response.headers['Date']
-    # response.headers['Status']
     if not response:
         print("404 coming Succesfully.")
     print(f"status code: {response.status_code}\n")
@@ -112,7 +104,7 @@ except Exception as err:
     print(f'Other error occurred: {err}')
 
 
-delPath = "/home/maniac/HTTP-Prajjwal_V2/testing/deleteme2.txt"
+delPath = "/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt"
 try:
     print("\nsending DELETE request with Auth..")
     response = s.delete(url + delPath, auth = ('http', 'sudo'))

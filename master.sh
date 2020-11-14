@@ -5,11 +5,12 @@
 while true
 do
 echo "s to start, q to exit, r to start/ restart."
-
 read key
 
 if [[ "$key" == 'r' ]]
 then
+    echo "Server Running On port 5562"
+    echo
     kill $(lsof -t -i:5562)
     gnome-terminal -e "bash -c \"python3 httpServer.py 5562; exec bash\""       
 elif [[ "$key" == 'q' ]]
@@ -24,7 +25,7 @@ elif [[ $key == 's' ]]
 then
     echo "Starting :D"
     # killall zsh
-    # kill $(lsof -t -i:5562)
+    kill $(lsof -t -i:5562)
     gnome-terminal -e "bash -c \"python3 httpServer.py 5562; exec bash\""       
     
 else
