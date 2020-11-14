@@ -94,3 +94,10 @@ webserver {
 }
 
 ```
+
+
+- Special Thanks to Abhijit Sir ( COEP CS Faculty)
+- RFC
+- Mozilla HTTP Docs
+- TutorialsPoint
+- Seniors and peers for helping me out throughout the project.
