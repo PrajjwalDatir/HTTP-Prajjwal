@@ -732,3 +732,907 @@
 
 2020-11-14 02:45:31,164:httpServer.py:	127.0.0.1	33944	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
 
+2020-11-14 03:29:50,060:httpServer.py:	127.0.0.1	34522	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2	200
+
+2020-11-14 03:29:53,470:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 34524)>	500
+
+2020-11-14 03:29:59,125:httpServer.py:	127.0.0.1	34526	GET /home/maniac/HTTP-Prajjwal_V2/supplement HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/supplement	200
+
+2020-11-14 03:30:01,482:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 34530)>	500
+
+2020-11-14 03:32:30,394:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 34542)>	500
+
+2020-11-14 03:32:30,395:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 34544)>	500
+
+2020-11-14 03:32:30,396:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 34546)>	500
+
+2020-11-14 03:32:30,397:httpServer.py:	<socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 34548)>	404
+
+2020-11-14 03:32:30,399:httpServer.py:	127.0.0.1	34550	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 03:33:38,882:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 37986)>	500
+
+2020-11-14 03:33:38,884:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 37988)>	500
+
+2020-11-14 03:33:38,885:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 37990)>	500
+
+2020-11-14 03:33:38,886:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 37992)>	404
+
+2020-11-14 03:33:38,887:httpServer.py:	127.0.0.1	37994	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 03:33:38,888:httpServer.py:	127.0.0.1	37994	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 03:37:23,658:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 38036)>	500
+
+2020-11-14 03:37:23,659:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 38038)>	500
+
+2020-11-14 03:37:23,661:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 38040)>	500
+
+2020-11-14 03:37:23,662:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 38042)>	404
+
+2020-11-14 03:37:23,663:httpServer.py:	127.0.0.1	38044	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 03:37:23,664:httpServer.py:	127.0.0.1	38044	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 03:45:19,507:httpServer.py:	127.0.0.1	38156	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2	200
+
+2020-11-14 03:45:24,012:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 38158)>	500
+
+2020-11-14 03:45:28,809:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 38160)>	500
+
+2020-11-14 03:46:49,682:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 34752)>	500
+
+2020-11-14 03:46:49,683:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 34754)>	500
+
+2020-11-14 03:46:49,685:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 34756)>	500
+
+2020-11-14 03:46:49,686:httpServer.py:	<socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 34758)>	404
+
+2020-11-14 03:46:49,687:httpServer.py:	127.0.0.1	34760	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 03:46:49,688:httpServer.py:	127.0.0.1	34760	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 03:50:34,174:httpServer.py:	127.0.0.1	38214	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2	200
+
+2020-11-14 03:50:36,096:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 38216)>	500
+
+2020-11-14 03:52:09,016:httpServer.py:	127.0.0.1	38234	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2	200
+
+2020-11-14 03:52:10,781:httpServer.py:	127.0.0.1	38238	GET /home/maniac/HTTP-Prajjwal_V2/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/form.html	200
+
+2020-11-14 03:52:21,757:httpServer.py:	127.0.0.1	38256	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 03:52:21,759:httpServer.py:	127.0.0.1	38256	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 03:52:21,761:httpServer.py:	127.0.0.1	38256	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 03:52:21,762:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 38256)>	404
+
+2020-11-14 03:52:21,764:httpServer.py:	127.0.0.1	38258	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 03:52:21,766:httpServer.py:	127.0.0.1	38258	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 04:02:04,632:httpServer.py:	127.0.0.1	38422	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2	200
+
+2020-11-14 04:02:21,343:httpServer.py:	127.0.0.1	38434	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 04:02:21,344:httpServer.py:	127.0.0.1	38434	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 04:02:21,346:httpServer.py:	127.0.0.1	38434	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 04:02:21,347:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 38434)>	404
+
+2020-11-14 04:02:21,348:httpServer.py:	127.0.0.1	38436	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 04:02:21,349:httpServer.py:	127.0.0.1	38436	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 04:06:36,000:httpServer.py:	127.0.0.1	35094	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 04:06:36,002:httpServer.py:	127.0.0.1	35094	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 04:06:36,004:httpServer.py:	127.0.0.1	35094	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 04:06:36,005:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 35094)>	404
+
+2020-11-14 04:06:36,007:httpServer.py:	127.0.0.1	35096	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 04:06:36,009:httpServer.py:	127.0.0.1	35096	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 04:06:36,010:httpServer.py:	127.0.0.1	35098	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	401
+
+2020-11-14 04:06:36,011:httpServer.py:	127.0.0.1	35100	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 04:34:20,595:httpServer.py:	127.0.0.1	35602	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 04:34:20,596:httpServer.py:	127.0.0.1	35602	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 04:34:20,598:httpServer.py:	127.0.0.1	35602	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 04:36:52,498:httpServer.py:	127.0.0.1	35632	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 04:36:52,499:httpServer.py:	127.0.0.1	35632	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 04:36:52,501:httpServer.py:	127.0.0.1	35632	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 04:36:52,502:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 35632)>	404
+
+2020-11-14 04:36:52,503:httpServer.py:	127.0.0.1	35634	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 04:36:52,504:httpServer.py:	127.0.0.1	35634	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 04:36:52,505:httpServer.py:	127.0.0.1	35636	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	401
+
+2020-11-14 04:36:52,506:httpServer.py:	127.0.0.1	35638	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 11:31:15,753:httpServer.py:	127.0.0.1	56344	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2	200
+
+2020-11-14 11:31:17,906:httpServer.py:	127.0.0.1	56348	GET /home/maniac/HTTP-Prajjwal_V2/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/form.html	200
+
+2020-11-14 11:32:49,120:httpServer.py:	127.0.0.1	55546	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2	200
+
+2020-11-14 11:32:49,628:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 55548)>	404
+
+2020-11-14 11:32:50,922:httpServer.py:	127.0.0.1	55550	GET /home/maniac/HTTP-Prajjwal_V2/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/form.html	200
+
+2020-11-14 11:32:55,529:httpServer.py:	127.0.0.1	55550	POST /home/maniac/HTTP-Prajjwal_V2/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/form.html	200
+
+2020-11-14 11:34:18,199:httpServer.py:	127.0.0.1	55584	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2	200
+
+2020-11-14 11:34:20,150:httpServer.py:	127.0.0.1	55586	GET /home/maniac/HTTP-Prajjwal_V2/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/form.html	200
+
+2020-11-14 11:34:23,664:httpServer.py:	127.0.0.1	55586	POST /home/maniac/HTTP-Prajjwal_V2/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/form.html	200
+
+2020-11-14 11:39:47,332:httpServer.py:	127.0.0.1	55688	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2	200
+
+2020-11-14 11:39:51,370:httpServer.py:	127.0.0.1	55690	GET /home/maniac/HTTP-Prajjwal_V2/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/form.html	200
+
+2020-11-14 11:39:56,938:httpServer.py:	127.0.0.1	55690	POST /home/maniac/HTTP-Prajjwal_V2/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/form.html	200
+
+2020-11-14 11:40:13,371:httpServer.py:	127.0.0.1	56540	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2	200
+
+2020-11-14 11:40:13,971:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 56542)>	404
+
+2020-11-14 11:40:16,554:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 56544)>	404
+
+2020-11-14 11:42:13,021:httpServer.py:	127.0.0.1	56566	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2	200
+
+2020-11-14 11:42:19,665:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 56570)>	404
+
+2020-11-14 11:45:46,070:httpServer.py:	127.0.0.1	56642	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2	200
+
+2020-11-14 11:45:49,596:httpServer.py:	127.0.0.1	56646	POST /home/maniac/HTTP-Prajjwal_V2/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/form.html	200
+
+2020-11-14 11:46:16,987:httpServer.py:	127.0.0.1	56652	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 11:46:17,022:httpServer.py:	127.0.0.1	56652	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 11:46:17,028:httpServer.py:	127.0.0.1	56652	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 11:46:17,033:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5562), raddr=('127.0.0.1', 56652)>	404
+
+2020-11-14 11:46:17,041:httpServer.py:	127.0.0.1	56654	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 11:46:17,044:httpServer.py:	127.0.0.1	56654	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 11:46:17,057:httpServer.py:	127.0.0.1	56656	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	401
+
+2020-11-14 11:46:17,061:httpServer.py:	127.0.0.1	56658	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 11:47:04,931:httpServer.py:	127.0.0.1	55836	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 11:47:04,933:httpServer.py:	127.0.0.1	55836	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 11:47:04,935:httpServer.py:	127.0.0.1	55836	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 11:47:04,937:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 55836)>	404
+
+2020-11-14 11:47:04,939:httpServer.py:	127.0.0.1	55838	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 11:47:04,941:httpServer.py:	127.0.0.1	55838	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 11:47:04,943:httpServer.py:	127.0.0.1	55840	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	401
+
+2020-11-14 11:47:04,946:httpServer.py:	127.0.0.1	55842	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 11:48:10,255:httpServer.py:	127.0.0.1	41468	GET / HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2	200
+
+2020-11-14 11:48:10,714:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 41470)>	404
+
+2020-11-14 11:48:14,792:httpServer.py:	127.0.0.1	41472	GET /home/maniac/HTTP-Prajjwal_V2/form.html HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/form.html	200
+
+2020-11-14 11:48:19,408:httpServer.py:	127.0.0.1	41478	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 11:48:19,410:httpServer.py:	127.0.0.1	41478	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 11:48:19,412:httpServer.py:	127.0.0.1	41478	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 11:48:19,414:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 41478)>	404
+
+2020-11-14 11:48:19,416:httpServer.py:	127.0.0.1	41480	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 11:48:19,418:httpServer.py:	127.0.0.1	41480	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 11:48:19,420:httpServer.py:	127.0.0.1	41482	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	401
+
+2020-11-14 11:48:19,422:httpServer.py:	127.0.0.1	41484	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 12:05:19,776:httpServer.py:	127.0.0.1	41776	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 12:05:19,779:httpServer.py:	127.0.0.1	41776	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 12:05:19,783:httpServer.py:	127.0.0.1	41776	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 12:05:19,786:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 41776)>	404
+
+2020-11-14 12:05:19,790:httpServer.py:	127.0.0.1	41778	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 12:05:19,792:httpServer.py:	127.0.0.1	41778	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 12:05:19,794:httpServer.py:	127.0.0.1	41780	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	401
+
+2020-11-14 12:05:19,796:httpServer.py:	127.0.0.1	41782	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 12:05:19,804:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 12:07:33,335:httpServer.py:	127.0.0.1	41854	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 12:07:33,337:httpServer.py:	127.0.0.1	41854	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 12:07:33,340:httpServer.py:	127.0.0.1	41854	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 12:07:33,342:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 41854)>	404
+
+2020-11-14 12:07:33,344:httpServer.py:	127.0.0.1	41856	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 12:07:33,345:httpServer.py:	127.0.0.1	41856	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 12:07:33,348:httpServer.py:	127.0.0.1	41858	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	401
+
+2020-11-14 12:07:33,350:httpServer.py:	127.0.0.1	41860	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 12:07:33,356:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 12:11:47,891:httpServer.py:	127.0.0.1	41926	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 12:11:47,893:httpServer.py:	127.0.0.1	41926	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 12:11:47,895:httpServer.py:	127.0.0.1	41926	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 12:11:47,897:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 41926)>	404
+
+2020-11-14 12:11:47,899:httpServer.py:	127.0.0.1	41928	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 12:11:47,901:httpServer.py:	127.0.0.1	41928	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 12:11:47,903:httpServer.py:	127.0.0.1	41930	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	401
+
+2020-11-14 12:11:47,905:httpServer.py:	127.0.0.1	41932	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 12:11:47,910:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 12:14:35,768:httpServer.py:	127.0.0.1	41980	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:07:26,181:httpServer.py:	127.0.0.1	42258	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	200
+
+2020-11-14 13:10:52,888:httpServer.py:	127.0.0.1	42318	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:10:52,890:httpServer.py:	127.0.0.1	42318	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:10:52,894:httpServer.py:	127.0.0.1	42318	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:10:52,896:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42318)>	404
+
+2020-11-14 13:10:52,899:httpServer.py:	127.0.0.1	42320	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:10:52,900:httpServer.py:	127.0.0.1	42320	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:10:52,902:httpServer.py:	127.0.0.1	42322	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:10:52,908:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:11:05,458:httpServer.py:	127.0.0.1	42330	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:11:05,463:httpServer.py:	127.0.0.1	42330	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:11:05,466:httpServer.py:	127.0.0.1	42330	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:11:05,469:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42330)>	404
+
+2020-11-14 13:11:05,473:httpServer.py:	127.0.0.1	42332	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:11:05,478:httpServer.py:	127.0.0.1	42332	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:11:05,481:httpServer.py:	127.0.0.1	42334	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:11:05,485:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:12:50,109:httpServer.py:	127.0.0.1	42366	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:12:50,111:httpServer.py:	127.0.0.1	42366	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:12:50,113:httpServer.py:	127.0.0.1	42366	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:12:50,115:httpServer.py:	<socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42366)>	404
+
+2020-11-14 13:12:50,116:httpServer.py:	127.0.0.1	42368	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:12:50,118:httpServer.py:	127.0.0.1	42368	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:12:50,120:httpServer.py:	127.0.0.1	42370	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	401
+
+2020-11-14 13:12:50,122:httpServer.py:	127.0.0.1	42372	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	400
+
+2020-11-14 13:12:50,124:httpServer.py:	127.0.0.1	42374	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:12:50,130:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:13:17,558:httpServer.py:	127.0.0.1	42384	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:13:17,562:httpServer.py:	127.0.0.1	42384	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:13:17,565:httpServer.py:	127.0.0.1	42384	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:13:17,567:httpServer.py:	<socket.socket fd=21, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42384)>	404
+
+2020-11-14 13:13:17,570:httpServer.py:	127.0.0.1	42386	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:13:17,573:httpServer.py:	127.0.0.1	42386	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:13:17,577:httpServer.py:	127.0.0.1	42388	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	401
+
+2020-11-14 13:13:17,579:httpServer.py:	127.0.0.1	42390	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	400
+
+2020-11-14 13:13:17,582:httpServer.py:	127.0.0.1	42392	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:13:17,586:httpServer.py:	<socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:13:30,791:httpServer.py:	127.0.0.1	42400	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:13:30,793:httpServer.py:	127.0.0.1	42400	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:13:30,795:httpServer.py:	127.0.0.1	42400	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:13:30,796:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42400)>	404
+
+2020-11-14 13:13:30,798:httpServer.py:	127.0.0.1	42402	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:13:30,800:httpServer.py:	127.0.0.1	42402	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:13:30,802:httpServer.py:	127.0.0.1	42404	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	401
+
+2020-11-14 13:13:30,804:httpServer.py:	127.0.0.1	42406	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	400
+
+2020-11-14 13:13:30,807:httpServer.py:	127.0.0.1	42408	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:13:30,813:httpServer.py:	<socket.socket fd=24, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:13:41,369:httpServer.py:	127.0.0.1	42414	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:13:41,372:httpServer.py:	127.0.0.1	42414	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:13:41,373:httpServer.py:	127.0.0.1	42414	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:13:41,375:httpServer.py:	<socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42414)>	404
+
+2020-11-14 13:13:41,377:httpServer.py:	127.0.0.1	42416	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:13:41,379:httpServer.py:	127.0.0.1	42416	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:13:41,382:httpServer.py:	127.0.0.1	42418	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	401
+
+2020-11-14 13:13:41,384:httpServer.py:	127.0.0.1	42420	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2	400
+
+2020-11-14 13:13:41,386:httpServer.py:	127.0.0.1	42422	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:13:41,394:httpServer.py:	<socket.socket fd=25, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:14:36,206:httpServer.py:	127.0.0.1	42458	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:14:36,208:httpServer.py:	127.0.0.1	42458	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:14:36,210:httpServer.py:	127.0.0.1	42458	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:14:36,212:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42458)>	404
+
+2020-11-14 13:14:36,214:httpServer.py:	127.0.0.1	42460	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:14:36,216:httpServer.py:	127.0.0.1	42460	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:14:36,218:httpServer.py:	127.0.0.1	42462	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:14:36,220:httpServer.py:	127.0.0.1	42464	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	200
+
+2020-11-14 13:14:36,223:httpServer.py:	127.0.0.1	42466	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:14:36,228:httpServer.py:	<socket.socket fd=21, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:15:59,565:httpServer.py:	127.0.0.1	42498	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:15:59,567:httpServer.py:	127.0.0.1	42498	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:15:59,569:httpServer.py:	127.0.0.1	42498	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:15:59,571:httpServer.py:	<socket.socket fd=24, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42498)>	404
+
+2020-11-14 13:15:59,573:httpServer.py:	127.0.0.1	42500	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:15:59,575:httpServer.py:	127.0.0.1	42500	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:15:59,577:httpServer.py:	127.0.0.1	42502	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:15:59,578:httpServer.py:	127.0.0.1	42504	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:15:59,580:httpServer.py:	127.0.0.1	42506	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:15:59,585:httpServer.py:	<socket.socket fd=22, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:16:15,091:httpServer.py:	127.0.0.1	42512	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:16:15,093:httpServer.py:	127.0.0.1	42512	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:16:15,095:httpServer.py:	127.0.0.1	42512	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:16:15,096:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42512)>	404
+
+2020-11-14 13:16:15,099:httpServer.py:	127.0.0.1	42514	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:16:15,102:httpServer.py:	127.0.0.1	42514	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:16:15,104:httpServer.py:	127.0.0.1	42516	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:16:15,106:httpServer.py:	127.0.0.1	42518	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:16:15,108:httpServer.py:	127.0.0.1	42520	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:16:15,113:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:16:52,966:httpServer.py:	127.0.0.1	42536	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:16:52,968:httpServer.py:	127.0.0.1	42536	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:16:52,970:httpServer.py:	127.0.0.1	42536	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:16:52,971:httpServer.py:	<socket.socket fd=40, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42536)>	404
+
+2020-11-14 13:16:52,973:httpServer.py:	127.0.0.1	42538	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:16:52,975:httpServer.py:	127.0.0.1	42538	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:16:52,977:httpServer.py:	127.0.0.1	42540	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:16:52,979:httpServer.py:	127.0.0.1	42542	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:16:52,981:httpServer.py:	127.0.0.1	42544	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:16:52,988:httpServer.py:	<socket.socket fd=21, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:17:58,524:httpServer.py:	127.0.0.1	42584	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:17:58,526:httpServer.py:	127.0.0.1	42584	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:17:58,528:httpServer.py:	127.0.0.1	42584	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:17:58,530:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42584)>	404
+
+2020-11-14 13:17:58,532:httpServer.py:	127.0.0.1	42586	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:17:58,533:httpServer.py:	127.0.0.1	42586	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:17:58,535:httpServer.py:	127.0.0.1	42588	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:17:58,537:httpServer.py:	127.0.0.1	42590	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:17:58,539:httpServer.py:	127.0.0.1	42592	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:17:58,546:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:18:21,414:httpServer.py:	127.0.0.1	42596	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:18:21,416:httpServer.py:	127.0.0.1	42596	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:18:21,418:httpServer.py:	127.0.0.1	42596	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:18:21,420:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42596)>	404
+
+2020-11-14 13:18:21,422:httpServer.py:	127.0.0.1	42598	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:18:21,423:httpServer.py:	127.0.0.1	42598	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:18:21,425:httpServer.py:	127.0.0.1	42600	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:18:21,428:httpServer.py:	127.0.0.1	42602	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:18:21,430:httpServer.py:	127.0.0.1	42604	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:18:21,436:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:18:46,313:httpServer.py:	127.0.0.1	42614	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	400
+
+2020-11-14 13:20:00,698:httpServer.py:	127.0.0.1	42628	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:20:00,700:httpServer.py:	127.0.0.1	42628	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:20:00,702:httpServer.py:	127.0.0.1	42628	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:20:00,704:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42628)>	404
+
+2020-11-14 13:20:00,705:httpServer.py:	127.0.0.1	42630	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:20:00,707:httpServer.py:	127.0.0.1	42630	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:20:00,709:httpServer.py:	127.0.0.1	42632	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:20:00,711:httpServer.py:	127.0.0.1	42634	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2	400
+
+2020-11-14 13:20:00,714:httpServer.py:	127.0.0.1	42636	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:20:00,720:httpServer.py:	<socket.socket fd=21, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:20:12,282:httpServer.py:	127.0.0.1	42642	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:20:12,284:httpServer.py:	127.0.0.1	42642	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:20:12,286:httpServer.py:	127.0.0.1	42642	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:20:12,288:httpServer.py:	<socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42642)>	404
+
+2020-11-14 13:20:12,290:httpServer.py:	127.0.0.1	42644	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:20:12,291:httpServer.py:	127.0.0.1	42644	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:20:12,294:httpServer.py:	127.0.0.1	42646	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:20:12,297:httpServer.py:	127.0.0.1	42648	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:20:12,299:httpServer.py:	127.0.0.1	42650	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:20:12,305:httpServer.py:	<socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:20:25,011:httpServer.py:	127.0.0.1	42658	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:20:25,013:httpServer.py:	127.0.0.1	42658	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:20:25,015:httpServer.py:	127.0.0.1	42658	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:20:25,016:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42658)>	404
+
+2020-11-14 13:20:25,018:httpServer.py:	127.0.0.1	42660	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:20:25,020:httpServer.py:	127.0.0.1	42660	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:20:25,022:httpServer.py:	127.0.0.1	42662	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:20:25,025:httpServer.py:	127.0.0.1	42664	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:20:25,027:httpServer.py:	127.0.0.1	42666	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:20:25,032:httpServer.py:	<socket.socket fd=24, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:20:41,886:httpServer.py:	127.0.0.1	57068	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:20:41,889:httpServer.py:	127.0.0.1	57068	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:20:41,891:httpServer.py:	127.0.0.1	57068	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:20:41,893:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 57068)>	404
+
+2020-11-14 13:20:41,896:httpServer.py:	127.0.0.1	57070	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:20:41,898:httpServer.py:	127.0.0.1	57070	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:20:41,900:httpServer.py:	127.0.0.1	57072	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:20:41,903:httpServer.py:	127.0.0.1	57074	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:20:41,906:httpServer.py:	127.0.0.1	57076	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:20:41,912:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561)>	505
+
+2020-11-14 13:21:24,506:httpServer.py:	127.0.0.1	57090	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:21:24,508:httpServer.py:	127.0.0.1	57090	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:21:24,510:httpServer.py:	127.0.0.1	57090	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:21:24,511:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 57090)>	404
+
+2020-11-14 13:21:24,513:httpServer.py:	127.0.0.1	57092	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:21:24,515:httpServer.py:	127.0.0.1	57092	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:21:24,517:httpServer.py:	127.0.0.1	57094	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:21:24,519:httpServer.py:	127.0.0.1	57096	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:21:24,521:httpServer.py:	127.0.0.1	57098	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:21:24,527:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561)>	505
+
+2020-11-14 13:21:51,198:httpServer.py:	127.0.0.1	57102	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:21:51,200:httpServer.py:	127.0.0.1	57102	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:21:51,201:httpServer.py:	127.0.0.1	57102	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:21:51,203:httpServer.py:	<socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 57102)>	404
+
+2020-11-14 13:21:51,205:httpServer.py:	127.0.0.1	57104	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:21:51,207:httpServer.py:	127.0.0.1	57104	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:21:51,209:httpServer.py:	127.0.0.1	57106	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:21:51,211:httpServer.py:	127.0.0.1	57108	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:21:51,213:httpServer.py:	127.0.0.1	57110	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:21:51,220:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561)>	505
+
+2020-11-14 13:22:23,499:httpServer.py:	127.0.0.1	42724	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:22:23,501:httpServer.py:	127.0.0.1	42724	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:22:23,503:httpServer.py:	127.0.0.1	42724	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:22:23,505:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42724)>	404
+
+2020-11-14 13:22:23,507:httpServer.py:	127.0.0.1	42726	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:22:23,508:httpServer.py:	127.0.0.1	42726	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:22:23,510:httpServer.py:	127.0.0.1	42728	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:22:23,513:httpServer.py:	127.0.0.1	42730	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:22:23,515:httpServer.py:	127.0.0.1	42732	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:22:23,520:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:26:33,351:httpServer.py:	127.0.0.1	42804	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:26:33,353:httpServer.py:	127.0.0.1	42804	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:26:33,355:httpServer.py:	127.0.0.1	42804	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:26:33,356:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42804)>	404
+
+2020-11-14 13:26:33,358:httpServer.py:	127.0.0.1	42806	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:26:33,360:httpServer.py:	127.0.0.1	42806	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:26:33,362:httpServer.py:	127.0.0.1	42808	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:26:33,366:httpServer.py:	127.0.0.1	42810	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:26:33,368:httpServer.py:	127.0.0.1	42812	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:26:33,373:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:26:46,813:httpServer.py:	127.0.0.1	42818	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	400
+
+2020-11-14 13:27:14,800:httpServer.py:	127.0.0.1	42822	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:27:14,802:httpServer.py:	127.0.0.1	42822	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:27:14,804:httpServer.py:	127.0.0.1	42822	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:27:14,806:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42822)>	404
+
+2020-11-14 13:27:14,808:httpServer.py:	127.0.0.1	42824	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:27:14,810:httpServer.py:	127.0.0.1	42824	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:27:14,811:httpServer.py:	127.0.0.1	42826	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:27:14,813:httpServer.py:	127.0.0.1	42828	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	400
+
+2020-11-14 13:27:14,816:httpServer.py:	127.0.0.1	42830	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:27:14,823:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:27:45,131:httpServer.py:	127.0.0.1	42842	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:27:45,133:httpServer.py:	127.0.0.1	42842	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:27:45,135:httpServer.py:	127.0.0.1	42842	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:27:45,137:httpServer.py:	<socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42842)>	404
+
+2020-11-14 13:27:45,139:httpServer.py:	127.0.0.1	42844	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:27:45,141:httpServer.py:	127.0.0.1	42844	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:27:45,143:httpServer.py:	127.0.0.1	42846	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	400
+
+2020-11-14 13:27:45,145:httpServer.py:	127.0.0.1	42848	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:27:45,149:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:28:10,525:httpServer.py:	127.0.0.1	42858	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:28:10,527:httpServer.py:	127.0.0.1	42858	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:28:10,529:httpServer.py:	127.0.0.1	42858	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:28:10,533:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 42858)>	404
+
+2020-11-14 13:28:10,537:httpServer.py:	127.0.0.1	42860	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:28:10,539:httpServer.py:	127.0.0.1	42860	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:28:10,541:httpServer.py:	127.0.0.1	42862	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:28:10,543:httpServer.py:	127.0.0.1	42864	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:28:10,545:httpServer.py:	127.0.0.1	42866	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:28:10,554:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:28:50,814:httpServer.py:	127.0.0.1	57276	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:28:50,817:httpServer.py:	127.0.0.1	57276	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:28:50,818:httpServer.py:	127.0.0.1	57276	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:28:50,820:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 57276)>	404
+
+2020-11-14 13:28:50,822:httpServer.py:	127.0.0.1	57278	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:28:50,824:httpServer.py:	127.0.0.1	57278	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:28:50,826:httpServer.py:	127.0.0.1	57280	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:28:50,829:httpServer.py:	127.0.0.1	57282	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:28:50,831:httpServer.py:	127.0.0.1	57284	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:28:50,836:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561)>	505
+
+2020-11-14 13:29:44,417:httpServer.py:	127.0.0.1	57316	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:29:44,419:httpServer.py:	127.0.0.1	57316	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:29:44,421:httpServer.py:	127.0.0.1	57316	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:29:44,423:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 57316)>	404
+
+2020-11-14 13:29:44,425:httpServer.py:	127.0.0.1	57318	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:29:44,427:httpServer.py:	127.0.0.1	57318	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:29:44,429:httpServer.py:	127.0.0.1	57320	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:29:44,432:httpServer.py:	127.0.0.1	57322	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:29:44,434:httpServer.py:	127.0.0.1	57324	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:29:44,442:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561)>	505
+
+2020-11-14 13:30:25,247:httpServer.py:	127.0.0.1	57336	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:30:25,249:httpServer.py:	127.0.0.1	57336	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:30:25,251:httpServer.py:	127.0.0.1	57336	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:30:25,253:httpServer.py:	<socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 57336)>	404
+
+2020-11-14 13:30:25,255:httpServer.py:	127.0.0.1	57338	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:30:25,256:httpServer.py:	127.0.0.1	57338	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:30:25,258:httpServer.py:	127.0.0.1	57340	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:30:25,260:httpServer.py:	127.0.0.1	57342	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:30:25,262:httpServer.py:	127.0.0.1	57344	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:30:25,266:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561)>	505
+
+2020-11-14 13:31:34,322:httpServer.py:	127.0.0.1	42966	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	400
+
+2020-11-14 13:33:58,301:httpServer.py:	127.0.0.1	43002	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:33:58,304:httpServer.py:	127.0.0.1	43002	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:33:58,306:httpServer.py:	127.0.0.1	43002	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:33:58,308:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 43002)>	404
+
+2020-11-14 13:33:58,310:httpServer.py:	127.0.0.1	43004	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:33:58,312:httpServer.py:	127.0.0.1	43004	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:33:58,314:httpServer.py:	127.0.0.1	43006	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1 HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1	400
+
+2020-11-14 13:33:58,316:httpServer.py:	127.0.0.1	43008	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:33:58,320:httpServer.py:	<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:34:36,949:httpServer.py:	127.0.0.1	43022	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:34:36,951:httpServer.py:	127.0.0.1	43022	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:34:36,953:httpServer.py:	127.0.0.1	43022	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:34:36,955:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 43022)>	404
+
+2020-11-14 13:34:36,957:httpServer.py:	127.0.0.1	43024	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:34:36,959:httpServer.py:	127.0.0.1	43024	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:34:36,961:httpServer.py:	127.0.0.1	43026	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:34:36,963:httpServer.py:	127.0.0.1	43028	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:34:36,964:httpServer.py:	127.0.0.1	43030	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:34:36,973:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+
+2020-11-14 13:35:16,231:httpServer.py:	127.0.0.1	43048	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	400
+
+2020-11-14 13:39:49,318:httpServer.py:	127.0.0.1	43092	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:40:19,969:httpServer.py:	127.0.0.1	57494	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:40:49,558:httpServer.py:	127.0.0.1	58338	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:42:13,128:httpServer.py:	127.0.0.1	57554	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:42:13,131:httpServer.py:	127.0.0.1	57554	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:42:13,134:httpServer.py:	127.0.0.1	57554	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:42:13,136:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 57554)>	404
+
+2020-11-14 13:42:13,138:httpServer.py:	127.0.0.1	57556	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:42:13,140:httpServer.py:	127.0.0.1	57556	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:42:13,142:httpServer.py:	127.0.0.1	57558	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme2.txt	400
+
+2020-11-14 13:42:13,144:httpServer.py:	127.0.0.1	57560	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:42:13,146:httpServer.py:	127.0.0.1	57562	HEAD /home/maniac/HTTP-Prajjwal_V2/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/test.txt	200
+
+2020-11-14 13:42:13,154:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561)>	505
+
+2020-11-14 13:42:42,281:httpServer.py:	127.0.0.1	57572	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:42:42,283:httpServer.py:	127.0.0.1	57572	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:42:42,285:httpServer.py:	127.0.0.1	57572	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:42:42,286:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561), raddr=('127.0.0.1', 57572)>	404
+
+2020-11-14 13:42:42,288:httpServer.py:	127.0.0.1	57574	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:42:42,290:httpServer.py:	127.0.0.1	57574	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:42:42,293:httpServer.py:	127.0.0.1	57576	DELETE /home/maniac/HTTP-Prajjwal_V2/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/testing/deleteme2.txt	200
+
+2020-11-14 13:42:42,298:httpServer.py:	127.0.0.1	57578	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:42:42,301:httpServer.py:	127.0.0.1	57580	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:42:42,308:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5561)>	505
+
+2020-11-14 13:43:04,764:httpServer.py:	127.0.0.1	43190	GET /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:43:04,766:httpServer.py:	127.0.0.1	43190	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:43:04,768:httpServer.py:	127.0.0.1	43190	GET /home/maniac/HTTP-Prajjwal/media/audio.mp3 HTTP/1.1	/home/maniac/HTTP-Prajjwal/media/audio.mp3	200
+
+2020-11-14 13:43:04,770:httpServer.py:	<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563), raddr=('127.0.0.1', 43190)>	404
+
+2020-11-14 13:43:04,772:httpServer.py:	127.0.0.1	43192	POST /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:43:04,775:httpServer.py:	127.0.0.1	43192	PUT /home/maniac/HTTP-Prajjwal/output.csv HTTP/1.1	/home/maniac/HTTP-Prajjwal/output.csv	200
+
+2020-11-14 13:43:04,778:httpServer.py:	127.0.0.1	43194	DELETE /home/maniac/HTTP-Prajjwal_V2/testing/deleteme2.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal_V2/testing/deleteme2.txt	200
+
+2020-11-14 13:43:04,781:httpServer.py:	127.0.0.1	43196	DELETE /home/maniac/HTTP-Prajjwal/testing/deleteme1.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt	401
+
+2020-11-14 13:43:04,783:httpServer.py:	127.0.0.1	43198	HEAD /home/maniac/HTTP-Prajjwal/test.txt HTTP/1.1	/home/maniac/HTTP-Prajjwal/test.txt	200
+
+2020-11-14 13:43:04,789:httpServer.py:	<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5563)>	505
+

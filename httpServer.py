@@ -1,5 +1,5 @@
 from socket import *
-from datetime import *
+import datetime 
 import os
 import time
 import random
@@ -15,25 +15,230 @@ import signal                           # signal to handle Ctrl+C and other SIGN
 from supplement.breakdown import *      # to breakdown entity
 from supplement.last_modified import *  # last_modified for condi get
 
-ip = None                    # IP 
-conn = True					 # to receive requests continuously in client's thread
-scode = 0                    # Status code initialization
 
-IDENTITY = 0                 # Cookie ID . This project Increments it by 1   
-conditional_get = False    	 # check : is it conditional get method?
-month = MONTH
+class http_methods:
 
-file_type = FORMAT2          # Dictionary to convert content types into the file extentions eg. text/html to .html
-file_extension = FORMAT      # Dictionary to convert file extentions into the content types eg. .html to text/html
-
-client_thread = []		     # list to work with the threads
-
-serversocket = socket(AF_INET, SOCK_STREAM)
-s = socket(AF_INET, SOCK_DGRAM)
-logging.basicConfig(filename = LOG, level = logging.INFO, format = '%(asctime)s:%(filename)s:%(message)s')
-
-
-class methods:
+    def response_get_head(self,connectionsocket, entity, switcher, query, method, glob):
+        serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY, client_thread = glob
+        isItFile = os.path.isfile(entity)
+        isItDir = os.path.isdir(entity)
+        show_response = ''
+        if isItFile:
+            show_response += 'HTTP/1.1 200 OK'
+            scode = 200
+            if (os.access(entity, os.R_OK)):
+                if (os.access(entity, os.W_OK)):
+                    pass
+                else:
+                    glob = status(connectionsocket, 403,[ip, client_thread, scode])
+                    ip, client_thread, scode = glob
+            else:
+                glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                ip, client_thread, scode = glob
+            try:
+                size = os.path.getsize(entity)
+                f = open(entity, "rb")
+                data = f.read(size)
+            except:
+                glob = status(connectionsocket, 500, [ip, client_thread, scode])
+                ip, client_thread, scode = glob
+        elif isItDir:
+            dir_list = os.listdir(entity)
+            show_response += 'HTTP/1.1 200 OK'
+            scode = 200
+            # if it is a directory
+            if os.access(entity, os.R_OK):
+                if (os.access(entity, os.W_OK)):
+                    pass
+                else:
+                    glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                    ip, client_thread, scode = glob
+            else:
+                glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                ip, client_thread, scode = glob
+            for i in dir_list:
+                if i.startswith('.'):
+                    dir_list.remove(i)
+                else:
+                    pass
+        else:
+            entity = entity.rstrip('/')
+            isItDir = os.path.isdir(entity)
+            isItFile = os.path.isfile(entity)
+            if isItDir:
+                scode = 200
+                show_response += 'HTTP/1.1 200 OK'
+                dir_list = os.listdir(entity)
+                entity = entity.rstrip('/')
+                if (os.access(entity, os.W_OK)):
+                    if (os.access(entity, os.R_OK)):
+                        pass
+                    else:
+                        glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                        ip, client_thread, scode = glob
+                else:
+                    glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                    ip, client_thread, scode = glob
+                for i in dir_list:
+                    if i.startswith('.'):
+                        dir_list.remove(i)
+                    else:
+                        pass
+            elif isItFile:
+                show_response += 'HTTP/1.1 200 OK'
+                scode = 200
+                if (os.access(entity, os.R_OK)):
+                    if (os.access(entity, os.W_OK)):
+                        pass
+                else:
+                    glob = status(connectionsocket, 403,[ip, client_thread, scode])
+                    ip, client_thread, scode = glob
+                try:
+                    size = os.path.getsize(entity)
+                    f = open(entity, "rb")
+                    data = f.read(size)
+                except:
+                    # error while accesing the file
+                    glob = status(connectionsocket, 500, [ip, client_thread, scode])
+                    ip, client_thread, scode = glob
+            else:	
+                glob = status(connectionsocket, 404, [ip, client_thread, scode])
+                ip, client_thread, scode = glob
+        show_response += '\r\n' + COOKIE + str(IDENTITY) + MAXAGE
+        IDENTITY += random.randint(1,10)
+        for state in switcher:
+            if state == 'User-Agent':
+                if isItDir:
+                    show_response += '\r\nServer: ' + ip
+                elif isItFile:
+                    l = time.ctime().split(' ')
+                    l[0] = l[0] + ','
+                    conversation = (' ').join(l)
+                    show_response += '\r\nServer: ' + ip
+                    conversation = '\r\nDate: ' + conversation
+                    show_response += conversation
+                    show_response += '\r\n' + last_modified(entity)
+                else:
+                    pass
+            elif state == 'Host':
+                pass
+            elif state == 'Accept':
+                if isItFile:
+                    try:
+                        file_ext = os.path.splitext(entity)
+                        if file_ext[1] in file_extension.keys():
+                            conversation = file_extension[file_ext[1]]
+                            temp = 0
+                        else:
+                            conversation = 'text/plain'
+                            temp = 1
+                        conversation = '\r\nContent-Type: '+ conversation
+                        show_response += conversation
+                    except:
+                        glob = status(connectionsocket, 415, [ip, client_thread, scode])
+                        ip, client_thread, scode = glob
+                        # scode = 415
+                elif isItDir:
+                    conversation = '\r\nContent-Type: text/html'
+                    show_response += conversation
+                else:
+                    pass
+            elif state == 'Accept-Language':
+                conversation = '\r\nContent-Language: ' + switcher[state]
+                show_response += conversation
+            elif state == 'Accept-Encoding':
+                if isItFile:
+                    conversation = '\r\nContent-Length: ' + str(size)
+                    show_response += conversation
+                else:
+                    pass
+            elif state == 'Connection':
+                if isItFile:
+                    conn = True
+                    show_response += '\r\nConnection: keep-alive'
+                elif isItDir:
+                    conn = False
+                    show_response += '\r\nConnection: close'
+                else:
+                    pass
+            elif state == 'If-Modified-Since':
+                if_modify(switcher[state], entity)
+            else:
+                continue
+        if isItDir and method == 'GET':
+            show_response += '\r\n\r\n'
+            show_response += '\r\n<!DOCTYPE html>'
+            show_response += '\r\n<html>\n<head>'
+            show_response += '\r\n<title>Directory listing</title>'
+            show_response += '\r\n<meta http-equiv="Content-type" content="text/html;charset=UTF-8" /></head>'
+            show_response += '\r\n<body><h1>Directory listing..</h1><ul>'
+            for line in dir_list:
+                if entity == '/':
+                    link = 'http://' + ip + ':' + str(serverport) + entity + line
+                    l = '\r\n<li><a href ="'+link+'">'+line+'</a></li>'
+                    show_response += l
+                else:
+                    link = 'http://' + ip + ':' + str(serverport) + entity + '/'+ line
+                    l = '\r\n<li><a href ="'+link+'">'+line+'</a></li>'
+                    show_response += l
+            show_response += '\r\n</ul></body></html>'
+            encoded = show_response.encode()
+            connectionsocket.send(encoded)
+            connectionsocket.close()
+        elif len(query) > 0 and not isItFile and not isItDir:
+            show_response = ''
+            row = ''
+            entity = CSVFILE
+            fields = ''
+            for d in query:
+                fields += d + ','
+                for i in query[d]:
+                    row += i + ','
+            file_exists = os.path.exists(entity)
+            if file_exists:
+                scode = 200
+                show_response += 'HTTP/1.1 200 OK'
+                fi = open(entity, "a")
+                row = list(row.split(",")) 
+                csvwriter = csv.writer(fi)
+                csvwriter.writerow(row)
+            else:
+                fi = open(entity, "w")
+                show_response += 'HTTP/1.1 201 Created'
+                scode = 201
+                show_response.append('Location: ' + entity)
+                csvwriter = csv.writer(fi)
+                csvwriter.writerow(fields)
+                csvwriter.writerow(row)
+            fi.close()
+            show_response += '\r\nServer: ' + ip
+            show_response += '\r\n'+ date()
+            f = open(WORKFILE, "rb")
+            show_response += '\r\nContent-Language: en-US,en'
+            size = os.path.getsize(WORKFILE)
+            conversation = '\r\nContent-Length: ' + str(size)
+            show_response += '\r\nContent-Type: text/html'
+            show_response += conversation
+            show_response += '\r\n' +last_modified(entity)
+            show_response += '\r\n\r\n'
+            encoded = show_response.encode()
+            connectionsocket.send(encoded)
+            connectionsocket.sendfile(f)
+        elif isItFile:
+            show_response += '\r\n\r\n'
+            if conditional_get == False and method == 'GET':
+                encoded = show_response.encode()
+                connectionsocket.send(encoded)
+                connectionsocket.sendfile(f)
+            elif conditional_get == False and method == 'HEAD':
+                encoded = show_response.encode()
+                connectionsocket.send(encoded)
+            elif conditional_get == True and (method == 'GET' or method == 'HEAD'):
+                status_304(connectionsocket, entity, [ip, scode])
+        else:
+            glob = status(connectionsocket, 400, [ip, client_thread, scode])
+            ip, client_thread, scode = glob
+        return [serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY]
         
     def response_post(self,ent_body, connectionsocket, switcher, glob):
         ip, serverport,scode = glob
@@ -43,7 +248,7 @@ class methods:
         if os.access(entity, os.W_OK):
             pass
         else:
-            status(connectionsocket, 403)
+            status(connectionsocket, 403, [ip, client_thread, scode])
         fields = ''
         row = ''
         for d in query:
@@ -81,283 +286,115 @@ class methods:
         connectionsocket.sendfile(f)
         return [ip, serverport, scode]
 
-    def response_get_head(self,connectionsocket, entity, switcher, query, method, glob):
-        serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY = glob
-        isfile = os.path.isfile(entity)
-        isdir = os.path.isdir(entity)
-        show_response = ''
-        if isfile:
-            show_response += 'HTTP/1.1 200 OK'
-            scode = 200
-            if (os.access(entity, os.R_OK)):
-                if (os.access(entity, os.W_OK)):
-                    pass
-                else:
-                    status(connectionsocket, 403)
-            else:
-                status(connectionsocket, 403)
-            try:
-                f = open(entity, "rb")
-                size = os.path.getsize(entity)
-                data = f.read(size)
-            except:
-                status(connectionsocket, 500)
-        elif isdir:
-            dir_list = os.listdir(entity)
-            show_response += 'HTTP/1.1 200 OK'
-            scode = 200
-            # if it is a directory
-            if os.access(entity, os.R_OK):
-                if (os.access(entity, os.W_OK)):
-                    pass
-                else:
-                    status(connectionsocket, 403)
-            else:
-                status(connectionsocket, 403)
-            for i in dir_list:
-                if i.startswith('.'):
-                    dir_list.remove(i)
-                else:
-                    pass
-        else:
-            entity = entity.rstrip('/')
-            isdir = os.path.isdir(entity)
-            isfile = os.path.isfile(entity)
-            if isfile:
-                show_response += 'HTTP/1.1 200 OK'
-                scode = 200
-                if (os.access(entity, os.R_OK)):
-                    if (os.access(entity, os.W_OK)):
-                        pass
-                else:
-                    status(connectionsocket, 403)
-                try:
-                    size = os.path.getsize(entity)
-                    f = open(entity, "rb")
-                    data = f.read(size)
-                except:
-                    # error while accesing the file
-                    status(connectionsocket, 500)
-            elif isdir:
-                scode = 200
-                show_response += 'HTTP/1.1 200 OK'
-                dir_list = os.listdir(entity)
-                if (os.access(entity, os.W_OK)):
-                    if (os.access(entity, os.R_OK)):
-                        pass
-                    else:
-                        status(connectionsocket, 403)
-                else:
-                    status(connectionsocket, 403)
-                for i in dir_list:
-                    if i.startswith('.'):
-                        dir_list.remove(i)
-                    else:
-                        pass
-            else:	
-                status(connectionsocket, 404)
-        show_response += '\r\n' + COOKIE + str(IDENTITY) + MAXAGE
-        IDENTITY += random.randint(1,10)
-        for state in switcher:
-            if state == 'User-Agent':
-                if isfile:
-                    show_response += '\r\nServer: ' + ip
-                    l = time.ctime().split(' ')
-                    l[0] = l[0] + ','
-                    conversation = (' ').join(l)
-                    conversation = '\r\nDate: ' + conversation
-                    show_response += conversation
-                    show_response += '\r\n' + last_modified(entity)
-                elif isdir:
-                    show_response += '\r\nServer: ' + ip
-            elif state == 'Host':
-                pass
-            elif state == 'Accept':
-                if isdir:
-                    conversation = '\r\nContent-Type: text/html'
-                    show_response += conversation
-                elif isfile:
-                    try:
-                        file_ext = os.path.splitext(entity)
-                        if file_ext[1] in file_extension.keys():
-                            conversation = file_extension[file_ext[1]]
-                        else:
-                            conversation = 'text/plain'
-                        conversation = '\r\nContent-Type: '+ conversation
-                        show_response += conversation
-                    except:
-                        status(connectionsocket, 415)
-            elif state == 'Accept-Language':
-                conversation = '\r\nContent-Language: ' + switcher[state]
-                show_response += conversation
-            elif state == 'Accept-Encoding':
-                if isfile:
-                    conversation = '\r\nContent-Length: ' + str(size)
-                    show_response += conversation
-            elif state == 'Connection':
-                if isfile:
-                    conn = True
-                    show_response += '\r\nConnection: keep-alive'
-                elif isdir:
-                    conn = False
-                    show_response += '\r\nConnection: close'
-            elif state == 'If-Modified-Since':
-                if_modify(switcher[state], entity)
-            else:
-                continue
-        if isdir and method == 'GET':
-            show_response += '\r\n\r\n'
-            show_response += '\r\n<!DOCTYPE html>'
-            show_response += '\r\n<html>\n<head>'
-            show_response += '\r\n<title>Directory listing</title>'
-            show_response += '\r\n<meta http-equiv="Content-type" content="text/html;charset=UTF-8" /></head>'
-            show_response += '\r\n<body><h1>Directory listing..</h1><ul>'
-            for line in dir_list:
-                if entity == '/':
-                    link = 'http://' + ip + ':' + str(serverport) + entity + line
-                    l = '\r\n<li><a href ="'+link+'">'+line+'</a></li>'
-                    show_response += l
-                else:
-                    link = 'http://' + ip + ':' + str(serverport) + entity + '/'+ line
-                    l = '\r\n<li><a href ="'+link+'">'+line+'</a></li>'
-                    show_response += l
-            show_response += '\r\n</ul></body></html>'
-            encoded = show_response.encode()
-            connectionsocket.send(encoded)
-            connectionsocket.close()
-        elif len(query) > 0 and not isdir and not isfile:
-            show_response = ''
-            entity = CSVFILE
-            fields = []
-            row = []
-            for d in query:
-                fields.append(d)
-                for i in query[d]:
-                    row.append(i)
-            file_exists = os.path.exists(entity)
-            if file_exists:
-                fi = open(entity, "a")
-                show_response += 'HTTP/1.1 200 OK'
-                scode = 200
-                csvwriter = csv.writer(fi)
-                csvwriter.writerow(row)
-            else:
-                fi = open(entity, "w")
-                show_response += 'HTTP/1.1 201 Created'
-                scode = 201
-                show_response.append('Location: ' + entity)
-                csvwriter = csv.writer(fi)
-                csvwriter.writerow(fields)
-                csvwriter.writerow(row)
-            fi.close()
-            show_response += '\r\nServer: ' + ip
-            show_response += '\r\n'+ date()
-            f = open(WORKFILE, "rb")
-            show_response += '\r\nContent-Language: en-US,en'
-            size = os.path.getsize(WORKFILE)
-            conversation = '\r\nContent-Length: ' + str(size)
-            show_response += '\r\nContent-Type: text/html'
-            show_response += conversation
-            show_response += '\r\n' +last_modified(entity)
-            show_response += '\r\n\r\n'
-            encoded = show_response.encode()
-            connectionsocket.send(encoded)
-            connectionsocket.sendfile(f)
-        elif isfile:
-            show_response += '\r\n\r\n'
-            if conditional_get == False and method == 'GET':
-                encoded = show_response.encode()
-                connectionsocket.send(encoded)
-                connectionsocket.sendfile(f)
-            elif conditional_get == False and method == 'HEAD':
-                encoded = show_response.encode()
-                connectionsocket.send(encoded)
-            elif conditional_get == True and (method == 'GET' or method == 'HEAD'):
-                status_304(connectionsocket, entity)
-        else:
-            status(connectionsocket, 400)
-        return [serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY]
-
-    def response_put(self,connectionsocket, addr, ent_body, filedata, entity, switcher, f_flag, scode):
-        show_response = ''
-        isfile = os.path.isfile(entity)
-        isdir = os.path.isdir(entity)
+    def response_put(self,connectionsocket, addr, ent_body, filedata, entity, switcher, f_flag, scode, glob):
+        ip, client_thread, scode = glob
         try:
             length = int(switcher['Content-Length'])
-        except KeyError:
-            status(connectionsocket, 411)
-        r = length % SIZE
-        q = int(length // SIZE)
+        except:
+            scode = 411
+            glob = status(connectionsocket, 411, [ip, client_thread, scode])
+            ip, client_thread, scode = glob
+        show_response = ''
         try:
             filedata = filedata + ent_body
         except TypeError:
             ent_body = ent_body.encode()
             filedata = filedata + ent_body
+        isItFile = os.path.isfile(entity)
+        isItDir = os.path.isdir(entity)
         i = len(ent_body)
         size = length - i
+        # r = length % SIZE
+        # q = int(length // SIZE)
+        # isItDir = os.path.isdir(entity)
+        # isItFile = os.path.isdir(entity)
         for _ in iter(int, 1):
             if not size > 0:
                 break
             ent_body = connectionsocket.recv(SIZE)
             try:
                 filedata = filedata + ent_body
-            except TypeError:
+            except:
                 ent_body = ent_body.encode()
+                print("encoding...")
                 filedata = filedata + ent_body
-            size = size - len(ent_body)
+            size -= len(ent_body)
         mode_f, r_201, move_p = True, False, False
-        isdir = os.path.isdir(entity)
-        isfile = os.path.isfile(entity)
-        l = len(entity)
         limit = len(ROOT)
-        if l >= limit:
-            if isdir:
+        l = len(entity)
+        if not l < limit:
+            if isItFile:
                 if os.access(entity, os.W_OK):
-                    pass
+                    # no need for read access
+                    if os.access(entity, os.R_OK):
+                        pass
+                    else:
+                        pass
                 else:
-                    status(connectionsocket, 403)
-                move_p = True
-                loc = ROOT + '/' + str(addr[1])
-                try:
-                    loc = loc + file_type[switcher['Content-Type'].split(';')[0]]
-                except:
-                    status(connectionsocket, 403)
-                if f_flag == 0:	
-                    f = open(loc, "w")
-                    f.write(filedata.decode())
-                else:
-                    f = open(loc, "wb")
-                    f.write(filedata)
-                f.close()
-            elif isfile:
-                if os.access(entity, os.W_OK):
-                    pass
-                else:
-                    status(connectionsocket, 403)
+                    glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                    ip, client_thread, scode = glob
+                # writing File mode ON
                 mode_f = True
-                if f_flag == 0:	
+                if f_flag == 1:
+                    f = open(entity, "wb")
+                    f.write(filedata)                    
+                elif f_flag == 0:	
                     f = open(entity, "w")
                     f.write(filedata.decode())
                 else:
                     f = open(entity, "wb")
                     f.write(filedata)
                 f.close()
+            elif isItDir:
+                move_p = True
+                loc = ROOT + '/' + str(addr[1])
+                if os.access(entity, os.W_OK):
+                    # no need for read access
+                    if os.access(entity, os.R_OK):
+                        pass
+                    else:
+                        pass
+                else:
+                    glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                    ip, client_thread, scode = glob
+                try:
+                    loc = loc + file_type[switcher['Content-Type'].split(';')[0]]
+                except:
+                    glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                    ip, client_thread, scode = glob
+                if f_flag == 1:
+                    f = open(loc, "wb")
+                    f.write(filedata)                    
+                elif f_flag == 0:	
+                    f = open(loc, "w")
+                    f.write(filedata.decode())
+                else:
+                    f = open(loc, "wb")
+                    f.write(filedata)
+                f.close()
+            
             else:
-                r = random.randint(0,4)
                 if ROOT in entity:
-                    r_201 = True
                     entity = ROOT + '/' + str(addr[1])
                     try:
                         entity = entity + file_type[switcher['Content-Type'].split(';')[0]]
                     except:
-                        status(connectionsocket, 403)
-                    if f_flag == 0:	
+                        # error in header
+                        glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                        ip, client_thread, scode = glob
+                    if f_flag:
+                        f = open(entity, "wb")
+                        f.write(filedata)                        
+                    elif f_flag == 0:	
+                        # open the file in write mode
                         f = open(entity, "w")
                         f.write(filedata.decode())
                     else:
+                        # open the file in write binary mode
                         f = open(entity, "wb")
                         f.write(filedata)
                     f.close()
+                    r_201 = True
                 else:
                     mode_f = False
         else:
@@ -366,7 +403,8 @@ class methods:
             try:
                 loc = loc + file_type[switcher['Content-Type']]
             except:
-                status(connectionsocket, 403)
+                glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                ip, client_thread, scode = glob
             if f_flag == 0:	
                 f = open(loc, "w")
             else:
@@ -392,18 +430,34 @@ class methods:
         show_response += '\r\n\r\n'
         encoded = show_response.encode()
         connectionsocket.send(encoded)
+        connectionsocket.close()
+        return None
 
     def response_delete(self,entity, connectionsocket, ent_body, switcher, glob):
-        ip, serverport,scode = glob
-        show_response = ''
-        isdir = os.path.isdir(entity)
-        isfile = os.path.isfile(entity)
+        ip, serverport,scode, client_thread = glob
+        isItDir = os.path.isdir(entity)
+        isItFile = os.path.isfile(entity)
+        # print(f"deleting {entity} ")
+        # print(isItFile)
         option_list = entity.split('/')
+        show_response = ''
         if 'Authorization' in switcher.keys():
             conversation = switcher['Authorization']
-            conversation = conversation.split(' ')
-            conversation = base64.decodebytes(conversation[1].encode()).decode()
-            conversation = conversation.split(':')
+            # print("Auth process started:")
+            if conversation:
+                conversation = conversation.split(' ')
+                conversation = base64.decodebytes(conversation[1].encode()).decode()
+                conversation = conversation.split(':')
+            else:
+                scode = 401
+                show_response += 'HTTP/1.1 401 Unauthorized'
+                show_response += '\r\nWWW-Authenticate: Basic'
+                show_response += '\r\n\r\n'
+                encoded = show_response.encode()
+                connectionsocket.send(encoded)
+                return [ip, serverport, scode]
+
+
             if conversation[0] == USERNAME:
                 if conversation[1] == PASSWORD:
                     pass
@@ -431,11 +485,11 @@ class methods:
             encoded = show_response.encode()
             connectionsocket.send(encoded)
             return [ip, serverport, scode]
-        if len(ent_body) > 1 or 'delete' in option_list or isdir:
+        if len(ent_body) > 1 or 'delete' in option_list or isItDir:
             scode = 405
             show_response += 'HTTP/1.1 405 Method Not Allowed'
             show_response += '\r\nAllow: GET, HEAD, POST, PUT'
-        elif isfile:
+        elif isItFile:
             scode = 200
             show_response += 'HTTP/1.1 200 OK'
             try:
@@ -443,9 +497,11 @@ class methods:
                     if (os.access(entity, os.R_OK)):
                         pass
                     else:
-                        status(connectionsocket, 403)
+                        glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                        ip, client_thread, scode = glob
                 else:
-                    status(connectionsocket, 403)
+                    glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                    ip, client_thread, scode = glob
                 shutil.move(entity, DELETE)
             except shutil.Error:
                 os.remove(entity)
@@ -460,15 +516,15 @@ class methods:
         connectionsocket.send(encoded)
         return [ip, serverport, scode]
 
-m = methods()
+m = http_methods()
 
 #function to check if the resource has been modified or not since the date in HTTP request 
 def if_modify(state, entity):
     global conditional_get, month
     valid = False
+    day = state.split(' ')
     if len(day) == 5:
         valid = True
-    day = state.split(' ')
     if valid:
         m = month[day[1]]
         date = int(day[2])
@@ -486,15 +542,18 @@ def if_modify(state, entity):
 
 #function to return current date
 def date():
-    l = time.ctime().split(' ')
-    l[0] = l[0] + ','
-    conversation = (' ').join(l)
-    conversation = 'Date: ' + conversation
+    #  Sun, 06 Nov 1994 08:49:37 GMT  ; RFC 822, updated by RFC 1123
+    # Sunday, 06-Nov-94 08:49:37 GMT ; RFC 850, obsoleted by RFC 1036
+    # Sun Nov  6 08:49:37 1994       ; ANSI C's asctime() format
+    now = datetime.datetime.now()
+    datenow = now.strftime('%A,%d %B %Y %H:%M:%S ')
+    datenow += "GMT"
+    conversation = 'Date: ' + datenow
     return conversation
 
 #function to give response if server is busy
-def status(connectionsocket, code):
-    global ip, client_thread, scode
+def status(connectionsocket, code, glob):
+    ip, client_thread, scode = glob
     scode = code
     show_response = ''
     if (code == '505') or (code == 505):
@@ -524,12 +583,13 @@ def status(connectionsocket, code):
         connectionsocket.close()
     except:
         pass
-    server()
+    server([serversocket, file_extension, conditional_get, conn, SIZE, client_thread, scode, ip, IDENTITY, serverport])
+    return [ip, client_thread, scode]
 
 
 #function for conditional get implementation
-def status_304(connectionsocket, entity):
-    global ip
+def status_304(connectionsocket, entity, glob):
+    ip, scode = glob
     scode = 304
     show_response = ''
     show_response += 'HTTP/1.1 304 Not Modified'
@@ -542,85 +602,112 @@ def status_304(connectionsocket, entity):
 
 
 #function which operates between response and requests
-def bridgeFunction(connectionsocket, addr, start):
-    global serversocket, file_extension, conditional_get, conn, SIZE, client_thread, scode, ip, IDENTITY, serverport
+def bridgeFunction(connectionsocket, addr, start, glob):
+    serversocket, file_extension, conditional_get, conn, SIZE, client_thread, scode, ip, IDENTITY, serverport = glob
     conditional_get = False
+    urlflag = 0
     f_flag = 0
     filedata = b""
     conn = True
-    urlflag = 0
     for _ in iter(int, 1):
         if not conn:
+            # print("Connection not established")
             break
-        message = connectionsocket.recv(SIZE)
+        if SIZE > 0:
+            pass
+        else:
+            break
         try:
+            message = connectionsocket.recv(SIZE)
+        except OSError:
+            message = connectionsocket.recv(SIZE)
+        try:
+            f_flag = 0
             message = message.decode('utf-8')
             req_list = message.split('\r\n\r\n')
-            # print req_list to see it
             # print(req_list)
-            f_flag = 0
         except UnicodeDecodeError:
+            f_flag = 1
             # if you're using non UTF-8 chars
             req_list = message.split(b'\r\n\r\n')
             req_list[0] = req_list[0].decode(errors = 'ignore')
             # print(req_list)
-            f_flag = 1
-        if len(req_list) > 1:
+        if len(req_list) == 1:
+            status(connectionsocket, 505, [ip, client_thread, scode])
+            print("\nBlank line expected at the end\n")
+            break
+        elif len(req_list) > 1:
             # every line ends with a \r\n so for only headers it'll create ['req', '']
             pass
         else:
-            # print("Error in headers\n")
+            status(connectionsocket, 505, [ip, client_thread, scode])
+            print("Error in headers\n")
             break
         try:
-            log.write(((addr[0]) + '\n' + req_list[0] + '\n\n'))
+            LOG.write(((addr[0]) + '\n' + req_list[0] + '\n\n'))
         except:
             pass
-        show_response = ''
-        header_list = req_list[0].split('\r\n')
-        header_len = len(header_list)
+        # show_response = ''
+        # header_len = len(header_list)
         ent_body = req_list[1]
+        header_list = req_list[0].split('\r\n')
         request_line = header_list[0].split(' ')
-        method = request_line[0]
+        if len(req_list) < 2:
+            status(connectionsocket, 505, [ip, client_thread, scode])
+        else:
+            pass
         entity = request_line[1]
-        if (entity == favicon) or (entity == 'favicon') or (entity == 'favicon.ico'):
-            entity = FAVICON
-        elif entity == '/':
+        method = request_line[0]
+        if entity == '/':
             entity = os.getcwd()
+        elif (entity == favicon) or (entity == 'favicon') or (entity == 'favicon.ico'):
+            entity = FAVICON
         entity, query = breakdown(entity)
         if (len(entity) > MAX_URL and urlflag == 0):
-            status(connectionsocket, 414)
+            status(connectionsocket, 414, [ip, client_thread, scode])
             connectionsocket.close()
             break
+        elif len(entity) <= MAX_URL:
+            # print("working Fine")
+            urlflag = 1
+            pass
         else:
             urlflag = 1
         version = request_line[2]
         try:
             version_num = version.split('/')[1]
-            if not (version_num == RUNNING_VERSION):
-                status(connectionsocket, 505)
+            if (version_num == RUNNING_VERSION):
+                # print("using HTTP 1.1")
+                pass
+            elif not (version_num == RUNNING_VERSION):
+                status(connectionsocket, 505, [ip, client_thread, scode])
         except IndexError:
-            status(connectionsocket, 505)
-        switcher = {}
+            # print("EXPECTED HTTP version number")
+            status(connectionsocket, 505, [ip, client_thread, scode])
         request_line = header_list.pop(0)
-        for line in header_list :
+        switcher = {}
+        i = 0
+        while i < len(header_list):
+            line = header_list[i]
             line_list = line.split(': ')
             switcher[line_list[0]] = line_list[1]
-        if method == 'GET' or method == 'HEAD':
+            i += 1
+        if  (method == 'HEAD') or (method == 'GET'):
             # connectionsocket, entity, switcher, query, method, glob
             glob = m.response_get_head(connectionsocket, entity, switcher, query, method, 
-            [serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY])
+            [serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY, client_thread])
 
             serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY = glob
         elif method == 'POST':
             glob = m.response_post(ent_body, connectionsocket, switcher, [ip,serverport, scode])
             ip,serverport, scode = glob
         elif method == 'DELETE':
-            glob = m.response_delete(entity, connectionsocket, ent_body, switcher, [ip,serverport, scode])
+            glob = m.response_delete(entity, connectionsocket, ent_body, switcher, [ip,serverport, scode, client_thread])
             ip, serverport, scode = glob
             conn = False
             connectionsocket.close()
         elif method == 'PUT':
-            glob = m.response_put(connectionsocket, addr, ent_body, filedata, entity, switcher, f_flag, scode)
+            m.response_put(connectionsocket, addr, ent_body, filedata, entity, switcher, f_flag, scode, [ip, client_thread, scode])
         else:
             method = 'Not Defined'
             break
@@ -633,17 +720,17 @@ def bridgeFunction(connectionsocket, addr, start):
         pass
 
 #function handling multiple requests
-def server():
-    global client_thread
+def server(glob):
+    serversocket, file_extension, conditional_get, conn, SIZE, client_thread, scode, ip, IDENTITY, serverport = glob
     for _ in iter(int, 1):
         connectionsocket, addr = serversocket.accept() # connectionsocket = request, addr = port,ip
         start = 0
         client_thread.append(connectionsocket)  # add connections
         if not (len(client_thread) < MAX_REQUEST):
-            status(connectionsocket, 503)
+            status(connectionsocket, 503, [ip, client_thread, scode])
             connectionsocket.close()
         else:
-            start_new_thread(bridgeFunction, (connectionsocket, addr, start))
+            start_new_thread(bridgeFunction, (connectionsocket, addr, start, [serversocket, file_extension, conditional_get, conn, SIZE, client_thread, scode, ip, IDENTITY, serverport]))
     serversocket.close()
 
 '''
@@ -658,6 +745,23 @@ def signal_handler(sig, frame):
 
 
 if __name__ == '__main__':
+    ip = None                    # IP 
+    conn = True					 # to receive requests continuously in client's thread
+    scode = 0                    # Status code initialization
+
+    IDENTITY = 0                 # Cookie ID . This project Increments it by 1   
+    conditional_get = False    	 # check : is it conditional get method?
+    month = MONTH
+
+    file_type = FORMAT2          # Dictionary to convert content types into the file extentions eg. text/html to .html
+    file_extension = FORMAT      # Dictionary to convert file extentions into the content types eg. .html to text/html
+
+    client_thread = []		     # list to work with the threads
+
+    serversocket = socket(AF_INET, SOCK_STREAM)
+    s = socket(AF_INET, SOCK_DGRAM)
+    logging.basicConfig(filename = LOG, level = logging.INFO, format = '%(asctime)s:%(filename)s:%(message)s')
+
     # To run it on the localhost if you dont want google DNS
     ip = '127.0.0.1'
     # print(ip)
@@ -673,5 +777,5 @@ if __name__ == '__main__':
         sys.exit()
     serversocket.listen(5)
     print('HTTP server running on ip: ' + ip + ' port: ' + str(serverport) + '\nGo to this in the browser: (http://' + ip + ':' + str(serverport) + '/)')
-    server()            # IMP calling the main server Function
+    server([serversocket, file_extension, conditional_get, conn, SIZE, client_thread, scode, ip, IDENTITY, serverport])            # IMP calling the main server Function
     sys.exit()

@@ -11,7 +11,7 @@ read key
 if [[ "$key" == 'r' ]]
 then
     kill $(lsof -t -i:5562)
-    gnome-terminal -e "zsh -c \"python3 httpServer.py 5562; exec zsh\""       
+    gnome-terminal -e "bash -c \"python3 httpServer.py 5562; exec bash\""       
 elif [[ "$key" == 'q' ]]
 then
     echo "Shutting Down... zzzz..."
@@ -25,7 +25,7 @@ then
     echo "Starting :D"
     # killall zsh
     # kill $(lsof -t -i:5562)
-    gnome-terminal -e "zsh -c \"python3 httpServer.py 5562; exec zsh\""       
+    gnome-terminal -e "bash -c \"python3 httpServer.py 5562; exec bash\""       
     
 else
     echo

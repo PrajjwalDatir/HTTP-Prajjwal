@@ -45,7 +45,7 @@ try:
     # response.headers['Status']
     if not response:
         print("Something's Wrong!\nResponse Not Recieved.")
-    print(f"text files opening succesfully\nstatus code: {response.status_code}\n\n")
+    print(f"text files opening succesfully\nstatus code: {response.status_code}\n")
 except Exception as err:
     print(f'Other error occurred: {err}')
 
@@ -111,9 +111,22 @@ try:
 except Exception as err:
     print(f'Other error occurred: {err}')
 
-delPath = "/home/maniac/HTTP-Prajjwal/testing/deleteme1"
+
+delPath = "/home/maniac/HTTP-Prajjwal_V2/testing/deleteme2.txt"
 try:
-    print("\nsending DELETE request...")
+    print("\nsending DELETE request with Auth..")
+    response = s.delete(url + delPath, auth = ('http', 'sudo'))
+    if not response:
+        if response.status_code == 401:
+            print("Unauthorized User")
+    print(f"Deleted Succesfully\nstatus code: {response.status_code}")
+except Exception as err:
+    print(f'Other error occurred: {err}')
+
+
+delPath = "/home/maniac/HTTP-Prajjwal/testing/deleteme1.txt"
+try:
+    print("\nsending DELETE request without Auth...")
     response = s.delete(url + delPath)
     if not response:
         if response.status_code == 401:
@@ -131,3 +144,5 @@ try:
     print(f"Response recieved with status code: {response.status_code}")
 except Exception as err:
     print(f'Other error occurred: {err}')
+
+print("\nEverything Saved in log file succesfully.\nCheck server.log to check logs")
